@@ -1,0 +1,2921 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Para Danielita 🌻</title>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌻</text></svg>">
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #f8e9b3;
+    }
+
+    .container {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .petalo {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 60px;
+      height: 150px;
+      background: linear-gradient(to bottom, #FFD84D, #F4B400);
+      border-radius: 50% 50% 50% 50% / 70% 70% 30% 30%;
+      box-shadow: inset -5px -10px 10px rgba(0, 0, 0, 0.1);
+      transform-origin: bottom center;
+      --rotation: 0deg;
+      transform: rotate(var(--rotation)) translateY(-110px) scale(1);
+      animation: scaleUp 0.5s ease forwards;
+      z-index: 2;
+      animation-delay: 0s;
+    }
+
+    .petalo-back {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 60px;
+      height: 150px;
+      background: linear-gradient(to bottom, #FFE082, #FBC02D);
+      border-radius: 50% 50% 50% 50% / 70% 70% 30% 30%;
+      box-shadow: inset -5px -10px 10px rgba(0, 0, 0, 0.08);
+      transform-origin: bottom center;
+      --rotation: 0deg;
+      transform: rotate(var(--rotation)) translateY(-110px) scale(1);
+      animation: scaleUpBack 0.5s ease forwards;
+      z-index: 1;
+      opacity: 0.7;
+      animation-delay: 0s;
+    }
+
+    .rotate-1 {
+      --rotation: 0deg;
+    }
+
+    .rotate-2 {
+      --rotation: 22.5deg;
+    }
+
+    .rotate-3 {
+      --rotation: 45deg;
+    }
+
+    .rotate-4 {
+      --rotation: 67.5deg;
+    }
+
+    .rotate-5 {
+      --rotation: 90deg;
+    }
+
+    .rotate-6 {
+      --rotation: 112.5deg;
+    }
+
+    .rotate-7 {
+      --rotation: 135deg;
+    }
+
+    .rotate-8 {
+      --rotation: 157.5deg;
+    }
+
+    .rotate-9 {
+      --rotation: 180deg;
+    }
+
+    .rotate-10 {
+      --rotation: 202.5deg;
+    }
+
+    .rotate-11 {
+      --rotation: 225deg;
+    }
+
+    .rotate-12 {
+      --rotation: 247.5deg;
+    }
+
+    .rotate-13 {
+      --rotation: 270deg;
+    }
+
+    .rotate-14 {
+      --rotation: 292.5deg;
+    }
+
+    .rotate-15 {
+      --rotation: 315deg;
+    }
+
+    .rotate-16 {
+      --rotation: 337.5deg;
+    }
+
+    .rotate-back-1 {
+      --rotation: 11.25deg;
+    }
+
+    .rotate-back-2 {
+      --rotation: 33.75deg;
+    }
+
+    .rotate-back-3 {
+      --rotation: 56.25deg;
+    }
+
+    .rotate-back-4 {
+      --rotation: 78.75deg;
+    }
+
+    .rotate-back-5 {
+      --rotation: 101.25deg;
+    }
+
+    .rotate-back-6 {
+      --rotation: 123.75deg;
+    }
+
+    .rotate-back-7 {
+      --rotation: 146.25deg;
+    }
+
+    .rotate-back-8 {
+      --rotation: 168.75deg;
+    }
+
+    .rotate-back-9 {
+      --rotation: 191.25deg;
+    }
+
+    .rotate-back-10 {
+      --rotation: 213.75deg;
+    }
+
+    .rotate-back-11 {
+      --rotation: 236.25deg;
+    }
+
+    .rotate-back-12 {
+      --rotation: 258.75deg;
+    }
+
+    .rotate-back-13 {
+      --rotation: 281.25deg;
+    }
+
+    .rotate-back-14 {
+      --rotation: 303.75deg;
+    }
+
+    .rotate-back-15 {
+      --rotation: 326.25deg;
+    }
+
+    .rotate-back-16 {
+      --rotation: 348.75deg;
+    }
+
+    .center {
+      position: absolute;
+      width: 235px;
+      height: 235px;
+      border-radius: 50%;
+      z-index: 100;
+      left: -85px;
+      top: 32px;
+
+      background:
+        conic-gradient(#3b2a14, #4a3218, black),
+        #4a3218;
+
+      background-size: 10px 10px;
+      background-position: 0 0, 5px 5px;
+    }
+
+    .girasol-1 {
+      z-index: 15;
+      position: absolute;
+      left: 10%;
+      top: 60%;
+      transform: scale(1.1) rotate(-3deg);
+    }
+
+    .girasol-2 {
+      z-index: 14;
+      position: absolute;
+      left: 60%;
+      top: 50%;
+      transform: scale(0.95) rotate(2deg);
+    }
+
+    .girasol-3 {
+      z-index: 13;
+      position: absolute;
+      left: 40%;
+      top: 20%;
+      transform: scale(0.8) rotate(-7deg);
+    }
+
+    .girasol-4 {
+      z-index: 12;
+      position: absolute;
+      left: 75%;
+      top: 70%;
+      transform: scale(1.05) rotate(5deg);
+    }
+
+    .girasol-5 {
+      z-index: 11;
+      position: absolute;
+      left: 25%;
+      top: 30%;
+      transform: scale(0.7) rotate(-10deg);
+    }
+
+    .girasol-6 {
+      z-index: 10;
+      position: absolute;
+      left: 80%;
+      top: 20%;
+      transform: scale(0.6) rotate(8deg);
+    }
+
+    .girasol-7 {
+      z-index: 9;
+      position: absolute;
+      left: -15%;
+      top: 10%;
+      transform: scale(0.9) rotate(-12deg);
+    }
+
+    .girasol-8 {
+      z-index: 8;
+      position: absolute;
+      left: 5%;
+      top: -10%;
+      transform: scale(0.7) rotate(15deg);
+    }
+
+    .girasol-9 {
+      z-index: 7;
+      position: absolute;
+      left: 90%;
+      top: -15%;
+      transform: scale(0.8) rotate(-8deg);
+    }
+
+    .girasol-10 {
+      z-index: 6;
+      position: absolute;
+      left: -20%;
+      top: 80%;
+      transform: scale(0.6) rotate(20deg);
+    }
+
+    .girasol-11 {
+      z-index: 5;
+      position: absolute;
+      left: 95%;
+      top: 60%;
+      transform: scale(0.7) rotate(-15deg);
+    }
+
+    .girasol-12 {
+      z-index: 4;
+      position: absolute;
+      left: 50%;
+      top: 90%;
+      transform: scale(0.5) rotate(10deg);
+    }
+
+    .girasol-13 {
+      z-index: 3;
+      position: absolute;
+      left: 95%;
+      top: 16%;
+      transform: scale(0.6) rotate(12deg);
+    }
+
+    .girasol-14 {
+      z-index: 2;
+      position: absolute;
+      left: 0%;
+      top: 95%;
+      transform: scale(0.5) rotate(-18deg);
+    }
+
+    .girasol-15 {
+      z-index: 2;
+      position: absolute;
+      left: 32%;
+      top: 3%;
+      transform: scale(0.6) rotate(22deg);
+    }
+
+    .girasol-16 {
+      z-index: 1;
+      position: absolute;
+      left: 95%;
+      top: 40%;
+      transform: scale(0.45) rotate(-25deg);
+    }
+
+    .girasol-17 {
+      z-index: 1;
+      position: absolute;
+      left: 20%;
+      top: 0%;
+      transform: scale(0.5) rotate(30deg);
+    }
+
+    .girasol-18 {
+      z-index: 1;
+      position: absolute;
+      left: 70%;
+      top: 0%;
+      transform: scale(0.5) rotate(-30deg);
+    }
+
+    .girasol-19 {
+      z-index: 1;
+      position: absolute;
+      left: -10%;
+      top: 50%;
+      transform: scale(0.55) rotate(15deg);
+    }
+
+    .girasol-20 {
+      z-index: 1;
+      position: absolute;
+      left: 57%;
+      top: 0%;
+      transform: scale(0.45) rotate(-12deg);
+    }
+
+    .girasol-21 {
+      z-index: 99;
+      position: absolute;
+      left: 95%;
+      top: 90%;
+      transform: scale(0.4) rotate(8deg);
+    }
+
+    .girasol-22 {
+      z-index: 1;
+      position: absolute;
+      left: 0%;
+      top: 0%;
+      transform: scale(0.4) rotate(-8deg);
+    }
+
+    .girasol-23 {
+      z-index: 2;
+      position: absolute;
+      left: 5%;
+      top: 25%;
+      transform: scale(0.45) rotate(7deg);
+    }
+
+    .girasol-24 {
+      z-index: 3;
+      position: absolute;
+      left: 15%;
+      top: 25%;
+      transform: scale(0.5) rotate(-11deg);
+    }
+
+    .girasol-25 {
+      z-index: 2;
+      position: absolute;
+      left: 25%;
+      top: 40%;
+      transform: scale(0.4) rotate(13deg);
+    }
+
+    .girasol-26 {
+      z-index: 1;
+      position: absolute;
+      left: 35%;
+      top: 60%;
+      transform: scale(0.55) rotate(-9deg);
+    }
+
+    .girasol-27 {
+      z-index: 2;
+      position: absolute;
+      left: 45%;
+      top: 0%;
+      transform: scale(0.35) rotate(17deg);
+    }
+
+    .girasol-28 {
+      z-index: 99;
+      position: absolute;
+      left: 55%;
+      top: 30%;
+      transform: scale(0.6) rotate(-15deg);
+    }
+
+    .girasol-29 {
+      z-index: 2;
+      position: absolute;
+      left: 65%;
+      top: 50%;
+      transform: scale(0.4) rotate(10deg);
+    }
+
+    .girasol-30 {
+      z-index: 1;
+      position: absolute;
+      left: 75%;
+      top: 70%;
+      transform: scale(0.45) rotate(-13deg);
+    }
+
+    .girasol-31 {
+      z-index: 2;
+      position: absolute;
+      left: 10%;
+      top: 60%;
+      transform: scale(0.35) rotate(19deg);
+    }
+
+    .girasol-32 {
+      z-index: 3;
+      position: absolute;
+      left: 40%;
+      top: 75%;
+      transform: scale(0.5) rotate(-17deg);
+    }
+
+    .girasol-33 {
+      z-index: 2;
+      position: absolute;
+      left: 30%;
+      top: 55%;
+      transform: scale(0.4) rotate(15deg);
+    }
+
+    .girasol-34 {
+      z-index: 100;
+      position: absolute;
+      left: 45%;
+      top: 55%;
+      transform: scale(0.45) rotate(-8deg);
+    }
+
+    .girasol-35 {
+      z-index: 2;
+      position: absolute;
+      left: 50%;
+      top: 5%;
+      transform: scale(0.35) rotate(12deg);
+    }
+
+    .girasol-36 {
+      z-index: 3;
+      position: absolute;
+      left: 60%;
+      top: 10%;
+      transform: scale(0.5) rotate(-14deg);
+    }
+
+    .girasol-37 {
+      z-index: 98;
+      position: absolute;
+      left: 70%;
+      top: 25%;
+      transform: scale(0.4) rotate(16deg);
+    }
+
+    .girasol-38 {
+      z-index: 100;
+      position: absolute;
+      left: 73%;
+      top: 40%;
+      transform: scale(0.45) rotate(-10deg);
+    }
+
+    .girasol-39 {
+      z-index: 2;
+      position: absolute;
+      left: 60%;
+      top: 60%;
+      transform: scale(0.35) rotate(18deg);
+    }
+
+    .girasol-40 {
+      z-index: 3;
+      position: absolute;
+      left: 70%;
+      top: 75%;
+      transform: scale(0.5) rotate(-16deg);
+    }
+
+    .girasol-41 {
+      z-index: 2;
+      position: absolute;
+      left: 80%;
+      top: 50%;
+      transform: scale(0.4) rotate(14deg);
+    }
+
+    .girasol-42 {
+      z-index: 1;
+      position: absolute;
+      left: 75%;
+      top: 5%;
+      transform: scale(0.45) rotate(-7deg);
+    }
+
+    .girasol-43 {
+      z-index: 98;
+      position: absolute;
+      left: 88%;
+      top: 48%;
+      transform: scale(0.5) rotate(16deg);
+    }
+
+    .girasol-44 {
+      z-index: 98;
+      position: absolute;
+      left: 70%;
+      top: 25%;
+      transform: scale(0.4) rotate(16deg);
+    }
+
+    .girasol-45 {
+      z-index: 98;
+      position: absolute;
+      left: 70%;
+      top: 25%;
+      transform: scale(0.4) rotate(16deg);
+    }
+
+    .girasol-46 {
+      z-index: 98;
+      position: absolute;
+      left: 70%;
+      top: 25%;
+      transform: scale(0.4) rotate(16deg);
+    }
+
+    .girasol-47 {
+      z-index: 98;
+      position: absolute;
+      left: 70%;
+      top: 25%;
+      transform: scale(0.4) rotate(16deg);
+    }
+
+    .girasol-48 {
+      z-index: 3;
+      position: absolute;
+      left: 28%;
+      top: 85%;
+      transform: scale(0.5) rotate(-17deg);
+    }
+
+    .girasol-49 {
+      z-index: 98;
+      position: absolute;
+      left: 5%;
+      top: 48%;
+      transform: scale(0.5) rotate(16deg);
+    }
+
+    .girasol-50 {
+      z-index: 2;
+      position: absolute;
+      left: 11%;
+      top: 14%;
+      transform: scale(0.3) rotate(15deg);
+    }
+
+    .girasol-1 .petalo,
+    .girasol-1 .petalo-back {
+      animation-delay: 0s;
+    }
+
+    .girasol-2 .petalo,
+    .girasol-2 .petalo-back {
+      animation-delay: 0.3s;
+    }
+
+    .girasol-3 .petalo,
+    .girasol-3 .petalo-back {
+      animation-delay: 0.6s;
+    }
+
+    .girasol-4 .petalo,
+    .girasol-4 .petalo-back {
+      animation-delay: 0.9s;
+    }
+
+    .girasol-5 .petalo,
+    .girasol-5 .petalo-back {
+      animation-delay: 1.2s;
+    }
+
+    .girasol-6 .petalo,
+    .girasol-6 .petalo-back {
+      animation-delay: 1.5s;
+    }
+
+    .girasol-7 .petalo,
+    .girasol-7 .petalo-back {
+      animation-delay: 1.8s;
+    }
+
+    .girasol-8 .petalo,
+    .girasol-8 .petalo-back {
+      animation-delay: 2.1s;
+    }
+
+    .girasol-9 .petalo,
+    .girasol-9 .petalo-back {
+      animation-delay: 2.4s;
+    }
+
+    .girasol-10 .petalo,
+    .girasol-10 .petalo-back {
+      animation-delay: 2.7s;
+    }
+
+    .girasol-11 .petalo,
+    .girasol-11 .petalo-back {
+      animation-delay: 3s;
+    }
+
+    .girasol-12 .petalo,
+    .girasol-12 .petalo-back {
+      animation-delay: 3.3s;
+    }
+
+    .girasol-13 .petalo,
+    .girasol-13 .petalo-back {
+      animation-delay: 3.6s;
+    }
+
+    .girasol-14 .petalo,
+    .girasol-14 .petalo-back {
+      animation-delay: 3.9s;
+    }
+
+    .girasol-15 .petalo,
+    .girasol-15 .petalo-back {
+      animation-delay: 4.2s;
+    }
+
+    .girasol-16 .petalo,
+    .girasol-16 .petalo-back {
+      animation-delay: 4.5s;
+    }
+
+    .girasol-17 .petalo,
+    .girasol-17 .petalo-back {
+      animation-delay: 4.8s;
+    }
+
+    .girasol-18 .petalo,
+    .girasol-18 .petalo-back {
+      animation-delay: 5.1s;
+    }
+
+    .girasol-19 .petalo,
+    .girasol-19 .petalo-back {
+      animation-delay: 5.4s;
+    }
+
+    .girasol-20 .petalo,
+    .girasol-20 .petalo-back {
+      animation-delay: 5.7s;
+    }
+
+    .girasol-21 .petalo,
+    .girasol-21 .petalo-back {
+      animation-delay: 6s;
+    }
+
+    .girasol-22 .petalo,
+    .girasol-22 .petalo-back {
+      animation-delay: 6.3s;
+    }
+
+    .girasol-23 .petalo,
+    .girasol-23 .petalo-back {
+      animation-delay: 6.6s;
+    }
+
+    .girasol-24 .petalo,
+    .girasol-24 .petalo-back {
+      animation-delay: 6.9s;
+    }
+
+    .girasol-25 .petalo,
+    .girasol-25 .petalo-back {
+      animation-delay: 7.2s;
+    }
+
+    .girasol-26 .petalo,
+    .girasol-26 .petalo-back {
+      animation-delay: 7.5s;
+    }
+
+    .girasol-27 .petalo,
+    .girasol-27 .petalo-back {
+      animation-delay: 7.8s;
+    }
+
+    .girasol-28 .petalo,
+    .girasol-28 .petalo-back {
+      animation-delay: 8.1s;
+    }
+
+    .girasol-29 .petalo,
+    .girasol-29 .petalo-back {
+      animation-delay: 8.4s;
+    }
+
+    .girasol-30 .petalo,
+    .girasol-30 .petalo-back {
+      animation-delay: 8.7s;
+    }
+
+    .girasol-31 .petalo,
+    .girasol-31 .petalo-back {
+      animation-delay: 9.0s;
+    }
+
+    .girasol-32 .petalo,
+    .girasol-32 .petalo-back {
+      animation-delay: 9.3s;
+    }
+
+    .girasol-33 .petalo,
+    .girasol-33 .petalo-back {
+      animation-delay: 9.6s;
+    }
+
+    .girasol-34 .petalo,
+    .girasol-34 .petalo-back {
+      animation-delay: 9.9s;
+    }
+
+    .girasol-35 .petalo,
+    .girasol-35 .petalo-back {
+      animation-delay: 10.2s;
+    }
+
+    .girasol-36 .petalo,
+    .girasol-36 .petalo-back {
+      animation-delay: 10.5s;
+    }
+
+    .girasol-37 .petalo,
+    .girasol-37 .petalo-back {
+      animation-delay: 10.8s;
+    }
+
+    .girasol-38 .petalo,
+    .girasol-38 .petalo-back {
+      animation-delay: 11.1s;
+    }
+
+    .girasol-39 .petalo,
+    .girasol-39 .petalo-back {
+      animation-delay: 11.4s;
+    }
+
+    .girasol-40 .petalo,
+    .girasol-40 .petalo-back {
+      animation-delay: 11.7s;
+    }
+
+    .girasol-41 .petalo,
+    .girasol-41 .petalo-back {
+      animation-delay: 12.0s;
+    }
+
+    .girasol-42 .petalo,
+    .girasol-42 .petalo-back {
+      animation-delay: 12.3s;
+    }
+
+    .girasol-43 .petalo,
+    .girasol-43 .petalo-back {
+      animation-delay: 12.6s;
+    }
+
+    .girasol-44 .petalo,
+    .girasol-44 .petalo-back {
+      animation-delay: 12.9s;
+    }
+
+    .girasol-45 .petalo,
+    .girasol-45 .petalo-back {
+      animation-delay: 13.2s;
+    }
+
+    .girasol-46 .petalo,
+    .girasol-46 .petalo-back {
+      animation-delay: 13.5s;
+    }
+
+    .girasol-47 .petalo,
+    .girasol-47 .petalo-back {
+      animation-delay: 13.8s;
+    }
+
+    .girasol-48 .petalo,
+    .girasol-48 .petalo-back {
+      animation-delay: 13.8s;
+    }
+
+    .girasol-50 .petalo,
+    .girasol-50 .petalo-back {
+      animation-delay: 11.4s;
+    }
+
+    @keyframes scaleUp {
+      from {
+        transform: rotate(var(--rotation)) translateY(-110px) scale(0);
+      }
+
+      to {
+        transform: rotate(var(--rotation)) translateY(-110px) scale(1);
+      }
+    }
+
+    @keyframes scaleUpBack {
+      from {
+        transform: rotate(var(--rotation)) translateY(-110px) scale(0);
+      }
+
+      to {
+        transform: rotate(var(--rotation)) translateY(-110px) scale(1);
+      }
+    }
+
+    @media (min-width: 800px) {
+      .girasol-3,
+      .girasol-4,
+      .girasol-5,
+      .girasol-6,
+      .girasol-7,
+      .girasol-8,
+      .girasol-9,
+      .girasol-10,
+      .girasol-11,
+      .girasol-12,
+      .girasol-13,
+      .girasol-14,
+      .girasol-15,
+      .girasol-16,
+      .girasol-17,
+      .girasol-18,
+      .girasol-19,
+      .girasol-20,
+      .girasol-21,
+      .girasol-22 {
+        display: block;
+      }
+    }
+
+    @media (max-width: 799px) {
+      .girasol-4,
+      .girasol-14,
+      .girasol-15,
+      .girasol-16,
+      .girasol-17,
+      .girasol-18,
+      .girasol-19,
+      .girasol-20,
+      .girasol-22,
+      .girasol-23,
+      .girasol-24,
+      .girasol-25,
+      .girasol-26,
+      .girasol-28,
+      .girasol-29,
+      .girasol-30,
+      .girasol-31,
+      .girasol-32,
+      .girasol-33,
+      .girasol-34,
+      .girasol-35,
+      .girasol-36,
+      .girasol-37,
+      .girasol-38,
+      .girasol-39,
+      .girasol-40,
+      .girasol-41,
+      .girasol-42,
+      .girasol-43,
+      .girasol-44,
+      .girasol-45,
+      .girasol-46,
+      .girasol-47,
+      .girasol-48,
+      .girasol-49,
+      .girasol-50 {
+        display: none !important;
+      }
+    }
+
+    /* Cartita ((: */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .carta-container {
+      height: 100vh;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: sans-serif;
+      position: absolute;
+      z-index: 9999;
+    }
+
+    #open {
+      display: none;
+    }
+
+    .wrapper {
+      height: 200px;
+      width: 300px;
+      background-color: #f5f5f5;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      perspective: 1000px;
+    }
+
+    .tapa {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      top: 0;
+      left: 0;
+      border-right: 150px solid transparent;
+      border-bottom: 100px solid transparent;
+      border-left: 150px solid transparent;
+      transform-origin: top;
+      transition: transform 0.4s ease;
+    }
+
+    .tapa.uno {
+      border-top: 100px solid #ffffff;
+      transform: rotateX(0deg);
+      z-index: 4;
+      transition-delay: 0.6s;
+      filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.15));
+    }
+
+    .tapa.dos {
+      border-top: 100px solid #e6e6e6;
+      transform: rotateX(90deg);
+      z-index: 1;
+      transition-delay: 0.3s;
+    }
+
+    .envelope {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      top: 0;
+      left: 0;
+      border-top: 100px solid transparent;
+      border-right: 150px solid #f0f0f0;
+      border-bottom: 100px solid #ffffff;
+      border-left: 150px solid #eaeaea;
+      z-index: 3;
+    }
+
+    .carta {
+      position: absolute;
+      top: 0;
+      width: 85%;
+      height: 90%;
+      background-color: white;
+      border-radius: 15px;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+
+      font-size: 18px;
+      line-height: 1.4;
+      color: #3B4049;
+
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+
+      z-index: 2;
+      transform: translateY(0) scale(1);
+      transition: transform 0.6s ease, z-index 0s linear 0.4s;
+      font-family: 'Dancing Script', cursive;
+    }
+
+    .photo {
+      position: absolute;
+      top: 10px;
+      width: 120px;
+      height: 140px;
+      background-color: #fff;
+      border-radius: 1px;
+      overflow: hidden;
+      padding: 10px;
+      padding-bottom: 30px;
+
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+
+      z-index: 2;
+      transform: translateY(0) rotate(0deg) scale(1);
+      transition: transform 0.7s ease, z-index 0s linear 0.6s;
+    }
+
+    .photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    #open:checked+.wrapper .tapa.uno {
+      transform: rotateX(90deg);
+      transition-delay: 0s;
+    }
+
+    #open:checked+.wrapper .tapa.dos {
+      transform: rotateX(180deg);
+      transition-delay: 0.2s;
+    }
+
+    #open:checked+.wrapper .carta {
+      transform: translateY(-220px) scale(1.4);
+      z-index: 5;
+      transition-delay: 0.4s, 0.4s;
+    }
+
+    #open:checked + .wrapper .photo {
+      transform: translateY(-20px) translateX(150px) rotate(6deg) scale(1.6);
+      z-index: 6;
+      transition-delay: 0.6s, 0.6s;
+    }
+
+    .sello {
+      position: absolute;
+      top: 90px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: #fff8dc;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 24px;
+      z-index: 5;
+      box-shadow: 
+        0 4px 10px rgba(0,0,0,0.15),
+        inset 0 2px 4px rgba(255,255,255,0.6);
+      transition: transform 0.4s ease, opacity 0.3s ease;
+    }
+
+    .dedicatoria {
+      position: absolute;
+      top: 150px;
+      left: 50%;
+      transform: translateX(-50%);
+      
+      text-align: left;
+      font-size: 14px;
+      color: #555;
+
+      font-family: 'Dancing Script', cursive;
+
+      z-index: 4;
+      pointer-events: none;
+    }
+
+    .dedicatoria p {
+      margin: 2px 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="girasol-1">
+      <div class="center"></div>
+
+      <div class="petalo-back rotate-back-1"></div>
+      <div class="petalo-back rotate-back-2"></div>
+      <div class="petalo-back rotate-back-3"></div>
+      <div class="petalo-back rotate-back-4"></div>
+      <div class="petalo-back rotate-back-5"></div>
+      <div class="petalo-back rotate-back-6"></div>
+      <div class="petalo-back rotate-back-7"></div>
+      <div class="petalo-back rotate-back-8"></div>
+      <div class="petalo-back rotate-back-9"></div>
+      <div class="petalo-back rotate-back-10"></div>
+      <div class="petalo-back rotate-back-11"></div>
+      <div class="petalo-back rotate-back-12"></div>
+      <div class="petalo-back rotate-back-13"></div>
+      <div class="petalo-back rotate-back-14"></div>
+      <div class="petalo-back rotate-back-15"></div>
+      <div class="petalo-back rotate-back-16"></div>
+
+      <div class="petalo rotate-1"></div>
+      <div class="petalo rotate-2"></div>
+      <div class="petalo rotate-3"></div>
+      <div class="petalo rotate-4"></div>
+      <div class="petalo rotate-5"></div>
+      <div class="petalo rotate-6"></div>
+      <div class="petalo rotate-7"></div>
+      <div class="petalo rotate-8"></div>
+      <div class="petalo rotate-9"></div>
+      <div class="petalo rotate-10"></div>
+      <div class="petalo rotate-11"></div>
+      <div class="petalo rotate-12"></div>
+      <div class="petalo rotate-13"></div>
+      <div class="petalo rotate-14"></div>
+      <div class="petalo rotate-15"></div>
+      <div class="petalo rotate-16"></div>
+    </div>
+
+    <div class="girasol-2">
+      <div class="center"></div>
+
+      <div class="petalo-back rotate-back-1"></div>
+      <div class="petalo-back rotate-back-2"></div>
+      <div class="petalo-back rotate-back-3"></div>
+      <div class="petalo-back rotate-back-4"></div>
+      <div class="petalo-back rotate-back-5"></div>
+      <div class="petalo-back rotate-back-6"></div>
+      <div class="petalo-back rotate-back-7"></div>
+      <div class="petalo-back rotate-back-8"></div>
+      <div class="petalo-back rotate-back-9"></div>
+      <div class="petalo-back rotate-back-10"></div>
+      <div class="petalo-back rotate-back-11"></div>
+      <div class="petalo-back rotate-back-12"></div>
+      <div class="petalo-back rotate-back-13"></div>
+      <div class="petalo-back rotate-back-14"></div>
+      <div class="petalo-back rotate-back-15"></div>
+      <div class="petalo-back rotate-back-16"></div>
+
+      <div class="petalo rotate-1"></div>
+      <div class="petalo rotate-2"></div>
+      <div class="petalo rotate-3"></div>
+      <div class="petalo rotate-4"></div>
+      <div class="petalo rotate-5"></div>
+      <div class="petalo rotate-6"></div>
+      <div class="petalo rotate-7"></div>
+      <div class="petalo rotate-8"></div>
+      <div class="petalo rotate-9"></div>
+      <div class="petalo rotate-10"></div>
+      <div class="petalo rotate-11"></div>
+      <div class="petalo rotate-12"></div>
+      <div class="petalo rotate-13"></div>
+      <div class="petalo rotate-14"></div>
+      <div class="petalo rotate-15"></div>
+      <div class="petalo rotate-16"></div>
+    </div>
+
+    <div class="girasol-3">
+      <div class="center"></div>
+
+      <div class="petalo-back rotate-back-1"></div>
+      <div class="petalo-back rotate-back-2"></div>
+      <div class="petalo-back rotate-back-3"></div>
+      <div class="petalo-back rotate-back-4"></div>
+      <div class="petalo-back rotate-back-5"></div>
+      <div class="petalo-back rotate-back-6"></div>
+      <div class="petalo-back rotate-back-7"></div>
+      <div class="petalo-back rotate-back-8"></div>
+      <div class="petalo-back rotate-back-9"></div>
+      <div class="petalo-back rotate-back-10"></div>
+      <div class="petalo-back rotate-back-11"></div>
+      <div class="petalo-back rotate-back-12"></div>
+      <div class="petalo-back rotate-back-13"></div>
+      <div class="petalo-back rotate-back-14"></div>
+      <div class="petalo-back rotate-back-15"></div>
+      <div class="petalo-back rotate-back-16"></div>
+
+      <div class="petalo rotate-1"></div>
+      <div class="petalo rotate-2"></div>
+      <div class="petalo rotate-3"></div>
+      <div class="petalo rotate-4"></div>
+      <div class="petalo rotate-5"></div>
+      <div class="petalo rotate-6"></div>
+      <div class="petalo rotate-7"></div>
+      <div class="petalo rotate-8"></div>
+      <div class="petalo rotate-9"></div>
+      <div class="petalo rotate-10"></div>
+      <div class="petalo rotate-11"></div>
+      <div class="petalo rotate-12"></div>
+      <div class="petalo rotate-13"></div>
+      <div class="petalo rotate-14"></div>
+      <div class="petalo rotate-15"></div>
+      <div class="petalo rotate-16"></div>
+    </div>
+
+    <div class="girasol-4">
+      <div class="center"></div>
+
+      <div class="petalo-back rotate-back-1"></div>
+      <div class="petalo-back rotate-back-2"></div>
+      <div class="petalo-back rotate-back-3"></div>
+      <div class="petalo-back rotate-back-4"></div>
+      <div class="petalo-back rotate-back-5"></div>
+      <div class="petalo-back rotate-back-6"></div>
+      <div class="petalo-back rotate-back-7"></div>
+      <div class="petalo-back rotate-back-8"></div>
+      <div class="petalo-back rotate-back-9"></div>
+      <div class="petalo-back rotate-back-10"></div>
+      <div class="petalo-back rotate-back-11"></div>
+      <div class="petalo-back rotate-back-12"></div>
+      <div class="petalo-back rotate-back-13"></div>
+      <div class="petalo-back rotate-back-14"></div>
+      <div class="petalo-back rotate-back-15"></div>
+      <div class="petalo-back rotate-back-16"></div>
+
+      <div class="petalo rotate-1"></div>
+      <div class="petalo rotate-2"></div>
+      <div class="petalo rotate-3"></div>
+      <div class="petalo rotate-4"></div>
+      <div class="petalo rotate-5"></div>
+      <div class="petalo rotate-6"></div>
+      <div class="petalo rotate-7"></div>
+      <div class="petalo rotate-8"></div>
+      <div class="petalo rotate-9"></div>
+      <div class="petalo rotate-10"></div>
+      <div class="petalo rotate-11"></div>
+      <div class="petalo rotate-12"></div>
+      <div class="petalo rotate-13"></div>
+      <div class="petalo rotate-14"></div>
+      <div class="petalo rotate-15"></div>
+      <div class="petalo rotate-16"></div>
+    </div>
+
+    <div class="girasol-5">
+      <div class="center"></div>
+
+      <div class="petalo-back rotate-back-1"></div>
+      <div class="petalo-back rotate-back-2"></div>
+      <div class="petalo-back rotate-back-3"></div>
+      <div class="petalo-back rotate-back-4"></div>
+      <div class="petalo-back rotate-back-5"></div>
+      <div class="petalo-back rotate-back-6"></div>
+      <div class="petalo-back rotate-back-7"></div>
+      <div class="petalo-back rotate-back-8"></div>
+      <div class="petalo-back rotate-back-9"></div>
+      <div class="petalo-back rotate-back-10"></div>
+      <div class="petalo-back rotate-back-11"></div>
+      <div class="petalo-back rotate-back-12"></div>
+      <div class="petalo-back rotate-back-13"></div>
+      <div class="petalo-back rotate-back-14"></div>
+      <div class="petalo-back rotate-back-15"></div>
+      <div class="petalo-back rotate-back-16"></div>
+
+      <div class="petalo rotate-1"></div>
+      <div class="petalo rotate-2"></div>
+      <div class="petalo rotate-3"></div>
+      <div class="petalo rotate-4"></div>
+      <div class="petalo rotate-5"></div>
+      <div class="petalo rotate-6"></div>
+      <div class="petalo rotate-7"></div>
+      <div class="petalo rotate-8"></div>
+      <div class="petalo rotate-9"></div>
+      <div class="petalo rotate-10"></div>
+      <div class="petalo rotate-11"></div>
+      <div class="petalo rotate-12"></div>
+      <div class="petalo rotate-13"></div>
+      <div class="petalo rotate-14"></div>
+      <div class="petalo rotate-15"></div>
+      <div class="petalo rotate-16"></div>
+    </div>
+
+    <div class="girasol-6">
+      <div class="center"></div>
+
+      <div class="petalo-back rotate-back-1"></div>
+      <div class="petalo-back rotate-back-2"></div>
+      <div class="petalo-back rotate-back-3"></div>
+      <div class="petalo-back rotate-back-4"></div>
+      <div class="petalo-back rotate-back-5"></div>
+      <div class="petalo-back rotate-back-6"></div>
+      <div class="petalo-back rotate-back-7"></div>
+      <div class="petalo-back rotate-back-8"></div>
+      <div class="petalo-back rotate-back-9"></div>
+      <div class="petalo-back rotate-back-10"></div>
+      <div class="petalo-back rotate-back-11"></div>
+      <div class="petalo-back rotate-back-12"></div>
+      <div class="petalo-back rotate-back-13"></div>
+      <div class="petalo-back rotate-back-14"></div>
+      <div class="petalo-back rotate-back-15"></div>
+      <div class="petalo-back rotate-back-16"></div>
+
+      <div class="petalo rotate-1"></div>
+      <div class="petalo rotate-2"></div>
+      <div class="petalo rotate-3"></div>
+      <div class="petalo rotate-4"></div>
+      <div class="petalo rotate-5"></div>
+      <div class="petalo rotate-6"></div>
+      <div class="petalo rotate-7"></div>
+      <div class="petalo rotate-8"></div>
+      <div class="petalo rotate-9"></div>
+      <div class="petalo rotate-10"></div>
+      <div class="petalo rotate-11"></div>
+      <div class="petalo rotate-12"></div>
+      <div class="petalo rotate-13"></div>
+      <div class="petalo rotate-14"></div>
+      <div class="petalo rotate-15"></div>
+      <div class="petalo rotate-16"></div>
+    </div>
+
+    <div class="girasol-7">
+      <div class="center"></div>
+      <div class="petalo-back rotate-back-1"></div>
+      <div class="petalo-back rotate-back-2"></div>
+      <div class="petalo-back rotate-back-3"></div>
+      <div class="petalo-back rotate-back-4"></div>
+      <div class="petalo-back rotate-back-5"></div>
+      <div class="petalo-back rotate-back-6"></div>
+      <div class="petalo-back rotate-back-7"></div>
+      <div class="petalo-back rotate-back-8"></div>
+      <div class="petalo-back rotate-back-9"></div>
+      <div class="petalo-back rotate-back-10"></div>
+      <div class="petalo-back rotate-back-11"></div>
+      <div class="petalo-back rotate-back-12"></div>
+      <div class="petalo-back rotate-back-13"></div>
+      <div class="petalo-back rotate-back-14"></div>
+      <div class="petalo-back rotate-back-15"></div>
+      <div class="petalo-back rotate-back-16"></div>
+      <div class="petalo rotate-1"></div>
+      <div class="petalo rotate-2"></div>
+      <div class="petalo rotate-3"></div>
+      <div class="petalo rotate-4"></div>
+      <div class="petalo rotate-5"></div>
+      <div class="petalo rotate-6"></div>
+      <div class="petalo rotate-7"></div>
+      <div class="petalo rotate-8"></div>
+      <div class="petalo rotate-9"></div>
+      <div class="petalo rotate-10"></div>
+      <div class="petalo rotate-11"></div>
+      <div class="petalo rotate-12"></div>
+      <div class="petalo rotate-13"></div>
+      <div class="petalo rotate-14"></div>
+      <div class="petalo rotate-15"></div>
+      <div class="petalo rotate-16"></div>
+    </div>
+    <div class="girasol-8">
+      <div class="center"></div>
+      <div class="petalo-back rotate-back-1"></div>
+      <div class="petalo-back rotate-back-2"></div>
+      <div class="petalo-back rotate-back-3"></div>
+      <div class="petalo-back rotate-back-4"></div>
+      <div class="petalo-back rotate-back-5"></div>
+      <div class="petalo-back rotate-back-6"></div>
+      <div class="petalo-back rotate-back-7"></div>
+      <div class="petalo-back rotate-back-8"></div>
+      <div class="petalo-back rotate-back-9"></div>
+      <div class="petalo-back rotate-back-10"></div>
+      <div class="petalo-back rotate-back-11"></div>
+      <div class="petalo-back rotate-back-12"></div>
+      <div class="petalo-back rotate-back-13"></div>
+      <div class="petalo-back rotate-back-14"></div>
+      <div class="petalo-back rotate-back-15"></div>
+      <div class="petalo-back rotate-back-16"></div>
+      <div class="petalo rotate-1"></div>
+      <div class="petalo rotate-2"></div>
+      <div class="petalo rotate-3"></div>
+      <div class="petalo rotate-4"></div>
+      <div class="petalo rotate-5"></div>
+      <div class="petalo rotate-6"></div>
+      <div class="petalo rotate-7"></div>
+      <div class="petalo rotate-8"></div>
+      <div class="petalo rotate-9"></div>
+      <div class="petalo rotate-10"></div>
+      <div class="petalo rotate-11"></div>
+      <div class="petalo rotate-12"></div>
+      <div class="petalo rotate-13"></div>
+      <div class="petalo rotate-14"></div>
+      <div class="petalo rotate-15"></div>
+      <div class="petalo rotate-16"></div>
+    </div>
+    <div class="girasol-9">
+      <div class="center"></div>
+      <div class="petalo-back rotate-back-1"></div>
+      <div class="petalo-back rotate-back-2"></div>
+      <div class="petalo-back rotate-back-3"></div>
+      <div class="petalo-back rotate-back-4"></div>
+      <div class="petalo-back rotate-back-5"></div>
+      <div class="petalo-back rotate-back-6"></div>
+      <div class="petalo-back rotate-back-7"></div>
+      <div class="petalo-back rotate-back-8"></div>
+      <div class="petalo-back rotate-back-9"></div>
+      <div class="petalo-back rotate-back-10"></div>
+      <div class="petalo-back rotate-back-11"></div>
+      <div class="petalo-back rotate-back-12"></div>
+      <div class="petalo-back rotate-back-13"></div>
+      <div class="petalo-back rotate-back-14"></div>
+      <div class="petalo-back rotate-back-15"></div>
+      <div class="petalo-back rotate-back-16"></div>
+      <div class="petalo rotate-1"></div>
+      <div class="petalo rotate-2"></div>
+      <div class="petalo rotate-3"></div>
+      <div class="petalo rotate-4"></div>
+      <div class="petalo rotate-5"></div>
+      <div class="petalo rotate-6"></div>
+      <div class="petalo rotate-7"></div>
+      <div class="petalo rotate-8"></div>
+      <div class="petalo rotate-9"></div>
+      <div class="petalo rotate-10"></div>
+      <div class="petalo rotate-11"></div>
+      <div class="petalo rotate-12"></div>
+      <div class="petalo rotate-13"></div>
+      <div class="petalo rotate-14"></div>
+      <div class="petalo rotate-15"></div>
+      <div class="petalo rotate-16"></div>
+    </div>
+    <div class="girasol-10">
+      <div class="center"></div>
+      <div class="petalo-back rotate-back-1"></div>
+      <div class="petalo-back rotate-back-2"></div>
+      <div class="petalo-back rotate-back-3"></div>
+      <div class="petalo-back rotate-back-4"></div>
+      <div class="petalo-back rotate-back-5"></div>
+      <div class="petalo-back rotate-back-6"></div>
+      <div class="petalo-back rotate-back-7"></div>
+      <div class="petalo-back rotate-back-8"></div>
+      <div class="petalo-back rotate-back-9"></div>
+      <div class="petalo-back rotate-back-10"></div>
+      <div class="petalo-back rotate-back-11"></div>
+      <div class="petalo-back rotate-back-12"></div>
+      <div class="petalo-back rotate-back-13"></div>
+      <div class="petalo-back rotate-back-14"></div>
+      <div class="petalo-back rotate-back-15"></div>
+      <div class="petalo-back rotate-back-16"></div>
+      <div class="petalo rotate-1"></div>
+      <div class="petalo rotate-2"></div>
+      <div class="petalo rotate-3"></div>
+      <div class="petalo rotate-4"></div>
+      <div class="petalo rotate-5"></div>
+      <div class="petalo rotate-6"></div>
+      <div class="petalo rotate-7"></div>
+      <div class="petalo rotate-8"></div>
+      <div class="petalo rotate-9"></div>
+      <div class="petalo rotate-10"></div>
+      <div class="petalo rotate-11"></div>
+      <div class="petalo rotate-12"></div>
+      <div class="petalo rotate-13"></div>
+      <div class="petalo rotate-14"></div>
+      <div class="petalo rotate-15"></div>
+      <div class="petalo rotate-16"></div>
+    </div>
+    <div class="girasol-11">
+      <div class="center"></div>
+      <div class="petalo-back rotate-back-1"></div>
+      <div class="petalo-back rotate-back-2"></div>
+      <div class="petalo-back rotate-back-3"></div>
+      <div class="petalo-back rotate-back-4"></div>
+      <div class="petalo-back rotate-back-5"></div>
+      <div class="petalo-back rotate-back-6"></div>
+      <div class="petalo-back rotate-back-7"></div>
+      <div class="petalo-back rotate-back-8"></div>
+      <div class="petalo-back rotate-back-9"></div>
+      <div class="petalo-back rotate-back-10"></div>
+      <div class="petalo-back rotate-back-11"></div>
+      <div class="petalo-back rotate-back-12"></div>
+      <div class="petalo-back rotate-back-13"></div>
+      <div class="petalo-back rotate-back-14"></div>
+      <div class="petalo-back rotate-back-15"></div>
+      <div class="petalo-back rotate-back-16"></div>
+      <div class="petalo rotate-1"></div>
+      <div class="petalo rotate-2"></div>
+      <div class="petalo rotate-3"></div>
+      <div class="petalo rotate-4"></div>
+      <div class="petalo rotate-5"></div>
+      <div class="petalo rotate-6"></div>
+      <div class="petalo rotate-7"></div>
+      <div class="petalo rotate-8"></div>
+      <div class="petalo rotate-9"></div>
+      <div class="petalo rotate-10"></div>
+      <div class="petalo rotate-11"></div>
+      <div class="petalo rotate-12"></div>
+      <div class="petalo rotate-13"></div>
+      <div class="petalo rotate-14"></div>
+      <div class="petalo rotate-15"></div>
+      <div class="petalo rotate-16"></div>
+    </div>
+    <div class="girasol-12">
+      <div class="center"></div>
+      <div class="petalo-back rotate-back-1"></div>
+      <div class="petalo-back rotate-back-2"></div>
+      <div class="petalo-back rotate-back-3"></div>
+      <div class="petalo-back rotate-back-4"></div>
+      <div class="petalo-back rotate-back-5"></div>
+      <div class="petalo-back rotate-back-6"></div>
+      <div class="petalo-back rotate-back-7"></div>
+      <div class="petalo-back rotate-back-8"></div>
+      <div class="petalo-back rotate-back-9"></div>
+      <div class="petalo-back rotate-back-10"></div>
+      <div class="petalo-back rotate-back-11"></div>
+      <div class="petalo-back rotate-back-12"></div>
+      <div class="petalo-back rotate-back-13"></div>
+      <div class="petalo-back rotate-back-14"></div>
+      <div class="petalo-back rotate-back-15"></div>
+      <div class="petalo-back rotate-back-16"></div>
+      <div class="petalo rotate-1"></div>
+      <div class="petalo rotate-2"></div>
+      <div class="petalo rotate-3"></div>
+      <div class="petalo rotate-4"></div>
+      <div class="petalo rotate-5"></div>
+      <div class="petalo rotate-6"></div>
+      <div class="petalo rotate-7"></div>
+      <div class="petalo rotate-8"></div>
+      <div class="petalo rotate-9"></div>
+      <div class="petalo rotate-10"></div>
+      <div class="petalo rotate-11"></div>
+      <div class="petalo rotate-12"></div>
+      <div class="petalo rotate-13"></div>
+      <div class="petalo rotate-14"></div>
+      <div class="petalo rotate-15"></div>
+      <div class="petalo rotate-16"></div>
+    </div>
+    <div class="girasol-13">
+      <div class="center"></div>
+      <div class="petalo-back rotate-back-1"></div>
+      <div class="petalo-back rotate-back-2"></div>
+      <div class="petalo-back rotate-back-3"></div>
+      <div class="petalo-back rotate-back-4"></div>
+      <div class="petalo-back rotate-back-5"></div>
+      <div class="petalo-back rotate-back-6"></div>
+      <div class="petalo-back rotate-back-7"></div>
+      <div class="petalo-back rotate-back-8"></div>
+      <div class="petalo-back rotate-back-9"></div>
+      <div class="petalo-back rotate-back-10"></div>
+      <div class="petalo-back rotate-back-11"></div>
+      <div class="petalo-back rotate-back-12"></div>
+      <div class="petalo-back rotate-back-13"></div>
+      <div class="petalo-back rotate-back-14"></div>
+      <div class="petalo-back rotate-back-15"></div>
+      <div class="petalo-back rotate-back-16"></div>
+      <div class="petalo rotate-1"></div>
+      <div class="petalo rotate-2"></div>
+      <div class="petalo rotate-3"></div>
+      <div class="petalo rotate-4"></div>
+      <div class="petalo rotate-5"></div>
+      <div class="petalo rotate-6"></div>
+      <div class="petalo rotate-7"></div>
+      <div class="petalo rotate-8"></div>
+      <div class="petalo rotate-9"></div>
+      <div class="petalo rotate-10"></div>
+      <div class="petalo rotate-11"></div>
+      <div class="petalo rotate-12"></div>
+      <div class="petalo rotate-13"></div>
+      <div class="petalo rotate-14"></div>
+      <div class="petalo rotate-15"></div>
+      <div class="petalo rotate-16"></div>
+    </div>
+    <div class="girasol-14">
+      <div class="center"></div>
+      <div class="petalo-back rotate-back-1"></div>
+      <div class="petalo-back rotate-back-2"></div>
+      <div class="petalo-back rotate-back-3"></div>
+      <div class="petalo-back rotate-back-4"></div>
+      <div class="petalo-back rotate-back-5"></div>
+      <div class="petalo-back rotate-back-6"></div>
+      <div class="petalo-back rotate-back-7"></div>
+      <div class="petalo-back rotate-back-8"></div>
+      <div class="petalo-back rotate-back-9"></div>
+      <div class="petalo-back rotate-back-10"></div>
+      <div class="petalo-back rotate-back-11"></div>
+      <div class="petalo-back rotate-back-12"></div>
+      <div class="petalo-back rotate-back-13"></div>
+      <div class="petalo-back rotate-back-14"></div>
+      <div class="petalo-back rotate-back-15"></div>
+      <div class="petalo-back rotate-back-16"></div>
+      <div class="petalo rotate-1"></div>
+      <div class="petalo rotate-2"></div>
+      <div class="petalo rotate-3"></div>
+      <div class="petalo rotate-4"></div>
+      <div class="petalo rotate-5"></div>
+      <div class="petalo rotate-6"></div>
+      <div class="petalo rotate-7"></div>
+      <div class="petalo rotate-8"></div>
+      <div class="petalo rotate-9"></div>
+      <div class="petalo rotate-10"></div>
+      <div class="petalo rotate-11"></div>
+      <div class="petalo rotate-12"></div>
+      <div class="petalo rotate-13"></div>
+      <div class="petalo rotate-14"></div>
+      <div class="petalo rotate-15"></div>
+      <div class="petalo rotate-16"></div>
+    </div>
+    <div class="girasol-15">
+      <div class="center"></div>
+      <div class="petalo-back rotate-back-1"></div>
+      <div class="petalo-back rotate-back-2"></div>
+      <div class="petalo-back rotate-back-3"></div>
+      <div class="petalo-back rotate-back-4"></div>
+      <div class="petalo-back rotate-back-5"></div>
+      <div class="petalo-back rotate-back-6"></div>
+      <div class="petalo-back rotate-back-7"></div>
+      <div class="petalo-back rotate-back-8"></div>
+      <div class="petalo-back rotate-back-9"></div>
+      <div class="petalo-back rotate-back-10"></div>
+      <div class="petalo-back rotate-back-11"></div>
+      <div class="petalo-back rotate-back-12"></div>
+      <div class="petalo-back rotate-back-13"></div>
+      <div class="petalo-back rotate-back-14"></div>
+      <div class="petalo-back rotate-back-15"></div>
+      <div class="petalo-back rotate-back-16"></div>
+      <div class="petalo rotate-1"></div>
+      <div class="petalo rotate-2"></div>
+      <div class="petalo rotate-3"></div>
+      <div class="petalo rotate-4"></div>
+      <div class="petalo rotate-5"></div>
+      <div class="petalo rotate-6"></div>
+      <div class="petalo rotate-7"></div>
+      <div class="petalo rotate-8"></div>
+      <div class="petalo rotate-9"></div>
+      <div class="petalo rotate-10"></div>
+      <div class="petalo rotate-11"></div>
+      <div class="petalo rotate-12"></div>
+      <div class="petalo rotate-13"></div>
+      <div class="petalo rotate-14"></div>
+      <div class="petalo rotate-15"></div>
+      <div class="petalo rotate-16"></div>
+    </div>
+    <div class="girasol-16">
+      <div class="center"></div>
+      <div class="petalo-back rotate-back-1"></div>
+      <div class="petalo-back rotate-back-2"></div>
+      <div class="petalo-back rotate-back-3"></div>
+      <div class="petalo-back rotate-back-4"></div>
+      <div class="petalo-back rotate-back-5"></div>
+      <div class="petalo-back rotate-back-6"></div>
+      <div class="petalo-back rotate-back-7"></div>
+      <div class="petalo-back rotate-back-8"></div>
+      <div class="petalo-back rotate-back-9"></div>
+      <div class="petalo-back rotate-back-10"></div>
+      <div class="petalo-back rotate-back-11"></div>
+      <div class="petalo-back rotate-back-12"></div>
+      <div class="petalo-back rotate-back-13"></div>
+      <div class="petalo-back rotate-back-14"></div>
+      <div class="petalo-back rotate-back-15"></div>
+      <div class="petalo-back rotate-back-16"></div>
+      <div class="petalo rotate-1"></div>
+      <div class="petalo rotate-2"></div>
+      <div class="petalo rotate-3"></div>
+      <div class="petalo rotate-4"></div>
+      <div class="petalo rotate-5"></div>
+      <div class="petalo rotate-6"></div>
+      <div class="petalo rotate-7"></div>
+      <div class="petalo rotate-8"></div>
+      <div class="petalo rotate-9"></div>
+      <div class="petalo rotate-10"></div>
+      <div class="petalo rotate-11"></div>
+      <div class="petalo rotate-12"></div>
+      <div class="petalo rotate-13"></div>
+      <div class="petalo rotate-14"></div>
+      <div class="petalo rotate-15"></div>
+      <div class="petalo rotate-16"></div>
+    </div>
+    <div class="girasol-17">
+      <div class="center"></div>
+      <div class="petalo-back rotate-back-1"></div>
+      <div class="petalo-back rotate-back-2"></div>
+      <div class="petalo-back rotate-back-3"></div>
+      <div class="petalo-back rotate-back-4"></div>
+      <div class="petalo-back rotate-back-5"></div>
+      <div class="petalo-back rotate-back-6"></div>
+      <div class="petalo-back rotate-back-7"></div>
+      <div class="petalo-back rotate-back-8"></div>
+      <div class="petalo-back rotate-back-9"></div>
+      <div class="petalo-back rotate-back-10"></div>
+      <div class="petalo-back rotate-back-11"></div>
+      <div class="petalo-back rotate-back-12"></div>
+      <div class="petalo-back rotate-back-13"></div>
+      <div class="petalo-back rotate-back-14"></div>
+      <div class="petalo-back rotate-back-15"></div>
+      <div class="petalo-back rotate-back-16"></div>
+      <div class="petalo rotate-1"></div>
+      <div class="petalo rotate-2"></div>
+      <div class="petalo rotate-3"></div>
+      <div class="petalo rotate-4"></div>
+      <div class="petalo rotate-5"></div>
+      <div class="petalo rotate-6"></div>
+      <div class="petalo rotate-7"></div>
+      <div class="petalo rotate-8"></div>
+      <div class="petalo rotate-9"></div>
+      <div class="petalo rotate-10"></div>
+      <div class="petalo rotate-11"></div>
+      <div class="petalo rotate-12"></div>
+      <div class="petalo rotate-13"></div>
+      <div class="petalo rotate-14"></div>
+      <div class="petalo rotate-15"></div>
+      <div class="petalo rotate-16"></div>
+    </div>
+    <div class="girasol-18">
+      <div class="center"></div>
+      <div class="petalo-back rotate-back-1"></div>
+      <div class="petalo-back rotate-back-2"></div>
+      <div class="petalo-back rotate-back-3"></div>
+      <div class="petalo-back rotate-back-4"></div>
+      <div class="petalo-back rotate-back-5"></div>
+      <div class="petalo-back rotate-back-6"></div>
+      <div class="petalo-back rotate-back-7"></div>
+      <div class="petalo-back rotate-back-8"></div>
+      <div class="petalo-back rotate-back-9"></div>
+      <div class="petalo-back rotate-back-10"></div>
+      <div class="petalo-back rotate-back-11"></div>
+      <div class="petalo-back rotate-back-12"></div>
+      <div class="petalo-back rotate-back-13"></div>
+      <div class="petalo-back rotate-back-14"></div>
+      <div class="petalo-back rotate-back-15"></div>
+      <div class="petalo-back rotate-back-16"></div>
+      <div class="petalo rotate-1"></div>
+      <div class="petalo rotate-2"></div>
+      <div class="petalo rotate-3"></div>
+      <div class="petalo rotate-4"></div>
+      <div class="petalo rotate-5"></div>
+      <div class="petalo rotate-6"></div>
+      <div class="petalo rotate-7"></div>
+      <div class="petalo rotate-8"></div>
+      <div class="petalo rotate-9"></div>
+      <div class="petalo rotate-10"></div>
+      <div class="petalo rotate-11"></div>
+      <div class="petalo rotate-12"></div>
+      <div class="petalo rotate-13"></div>
+      <div class="petalo rotate-14"></div>
+      <div class="petalo rotate-15"></div>
+      <div class="petalo rotate-16"></div>
+    </div>
+    <div class="girasol-19">
+      <div class="center"></div>
+      <div class="petalo-back rotate-back-1"></div>
+      <div class="petalo-back rotate-back-2"></div>
+      <div class="petalo-back rotate-back-3"></div>
+      <div class="petalo-back rotate-back-4"></div>
+      <div class="petalo-back rotate-back-5"></div>
+      <div class="petalo-back rotate-back-6"></div>
+      <div class="petalo-back rotate-back-7"></div>
+      <div class="petalo-back rotate-back-8"></div>
+      <div class="petalo-back rotate-back-9"></div>
+      <div class="petalo-back rotate-back-10"></div>
+      <div class="petalo-back rotate-back-11"></div>
+      <div class="petalo-back rotate-back-12"></div>
+      <div class="petalo-back rotate-back-13"></div>
+      <div class="petalo-back rotate-back-14"></div>
+      <div class="petalo-back rotate-back-15"></div>
+      <div class="petalo-back rotate-back-16"></div>
+      <div class="petalo rotate-1"></div>
+      <div class="petalo rotate-2"></div>
+      <div class="petalo rotate-3"></div>
+      <div class="petalo rotate-4"></div>
+      <div class="petalo rotate-5"></div>
+      <div class="petalo rotate-6"></div>
+      <div class="petalo rotate-7"></div>
+      <div class="petalo rotate-8"></div>
+      <div class="petalo rotate-9"></div>
+      <div class="petalo rotate-10"></div>
+      <div class="petalo rotate-11"></div>
+      <div class="petalo rotate-12"></div>
+      <div class="petalo rotate-13"></div>
+      <div class="petalo rotate-14"></div>
+      <div class="petalo rotate-15"></div>
+      <div class="petalo rotate-16"></div>
+    </div>
+    <div class="girasol-20">
+      <div class="center"></div>
+      <div class="petalo-back rotate-back-1"></div>
+      <div class="petalo-back rotate-back-2"></div>
+      <div class="petalo-back rotate-back-3"></div>
+      <div class="petalo-back rotate-back-4"></div>
+      <div class="petalo-back rotate-back-5"></div>
+      <div class="petalo-back rotate-back-6"></div>
+      <div class="petalo-back rotate-back-7"></div>
+      <div class="petalo-back rotate-back-8"></div>
+      <div class="petalo-back rotate-back-9"></div>
+      <div class="petalo-back rotate-back-10"></div>
+      <div class="petalo-back rotate-back-11"></div>
+      <div class="petalo-back rotate-back-12"></div>
+      <div class="petalo-back rotate-back-13"></div>
+      <div class="petalo-back rotate-back-14"></div>
+      <div class="petalo-back rotate-back-15"></div>
+      <div class="petalo-back rotate-back-16"></div>
+      <div class="petalo rotate-1"></div>
+      <div class="petalo rotate-2"></div>
+      <div class="petalo rotate-3"></div>
+      <div class="petalo rotate-4"></div>
+      <div class="petalo rotate-5"></div>
+      <div class="petalo rotate-6"></div>
+      <div class="petalo rotate-7"></div>
+      <div class="petalo rotate-8"></div>
+      <div class="petalo rotate-9"></div>
+      <div class="petalo rotate-10"></div>
+      <div class="petalo rotate-11"></div>
+      <div class="petalo rotate-12"></div>
+      <div class="petalo rotate-13"></div>
+      <div class="petalo rotate-14"></div>
+      <div class="petalo rotate-15"></div>
+      <div class="petalo rotate-16"></div>
+    </div>
+    <div class="girasol-21">
+      <div class="center"></div>
+      <div class="petalo-back rotate-back-1"></div>
+      <div class="petalo-back rotate-back-2"></div>
+      <div class="petalo-back rotate-back-3"></div>
+      <div class="petalo-back rotate-back-4"></div>
+      <div class="petalo-back rotate-back-5"></div>
+      <div class="petalo-back rotate-back-6"></div>
+      <div class="petalo-back rotate-back-7"></div>
+      <div class="petalo-back rotate-back-8"></div>
+      <div class="petalo-back rotate-back-9"></div>
+      <div class="petalo-back rotate-back-10"></div>
+      <div class="petalo-back rotate-back-11"></div>
+      <div class="petalo-back rotate-back-12"></div>
+      <div class="petalo-back rotate-back-13"></div>
+      <div class="petalo-back rotate-back-14"></div>
+      <div class="petalo-back rotate-back-15"></div>
+      <div class="petalo-back rotate-back-16"></div>
+      <div class="petalo rotate-1"></div>
+      <div class="petalo rotate-2"></div>
+      <div class="petalo rotate-3"></div>
+      <div class="petalo rotate-4"></div>
+      <div class="petalo rotate-5"></div>
+      <div class="petalo rotate-6"></div>
+      <div class="petalo rotate-7"></div>
+      <div class="petalo rotate-8"></div>
+      <div class="petalo rotate-9"></div>
+      <div class="petalo rotate-10"></div>
+      <div class="petalo rotate-11"></div>
+      <div class="petalo rotate-12"></div>
+      <div class="petalo rotate-13"></div>
+      <div class="petalo rotate-14"></div>
+      <div class="petalo rotate-15"></div>
+      <div class="petalo rotate-16"></div>
+    </div>
+    <div class="girasol-22">
+      <div class="center"></div>
+      <div class="petalo-back rotate-back-1"></div>
+      <div class="petalo-back rotate-back-2"></div>
+      <div class="petalo-back rotate-back-3"></div>
+      <div class="petalo-back rotate-back-4"></div>
+      <div class="petalo-back rotate-back-5"></div>
+      <div class="petalo-back rotate-back-6"></div>
+      <div class="petalo-back rotate-back-7"></div>
+      <div class="petalo-back rotate-back-8"></div>
+      <div class="petalo-back rotate-back-9"></div>
+      <div class="petalo-back rotate-back-10"></div>
+      <div class="petalo-back rotate-back-11"></div>
+      <div class="petalo-back rotate-back-12"></div>
+      <div class="petalo-back rotate-back-13"></div>
+      <div class="petalo-back rotate-back-14"></div>
+      <div class="petalo-back rotate-back-15"></div>
+      <div class="petalo-back rotate-back-16"></div>
+      <div class="petalo rotate-1"></div>
+      <div class="petalo rotate-2"></div>
+      <div class="petalo rotate-3"></div>
+      <div class="petalo rotate-4"></div>
+      <div class="petalo rotate-5"></div>
+      <div class="petalo rotate-6"></div>
+      <div class="petalo rotate-7"></div>
+      <div class="petalo rotate-8"></div>
+      <div class="petalo rotate-9"></div>
+      <div class="petalo rotate-10"></div>
+      <div class="petalo rotate-11"></div>
+      <div class="petalo rotate-12"></div>
+      <div class="petalo rotate-13"></div>
+      <div class="petalo rotate-14"></div>
+      <div class="petalo rotate-15"></div>
+      <div class="petalo rotate-16"></div>
+    </div>
+    <div class="girasol-23">
+      <div class="center"></div>
+      <div class="petalo-back rotate-back-1"></div>
+      <div class="petalo-back rotate-back-2"></div>
+      <div class="petalo-back rotate-back-3"></div>
+      <div class="petalo-back rotate-back-4"></div>
+      <div class="petalo-back rotate-back-5"></div>
+      <div class="petalo-back rotate-back-6"></div>
+      <div class="petalo-back rotate-back-7"></div>
+      <div class="petalo-back rotate-back-8"></div>
+      <div class="petalo-back rotate-back-9"></div>
+      <div class="petalo-back rotate-back-10"></div>
+      <div class="petalo-back rotate-back-11"></div>
+      <div class="petalo-back rotate-back-12"></div>
+      <div class="petalo-back rotate-back-13"></div>
+      <div class="petalo-back rotate-back-14"></div>
+      <div class="petalo-back rotate-back-15"></div>
+      <div class="petalo-back rotate-back-16"></div>
+      <div class="petalo rotate-1"></div>
+      <div class="petalo rotate-2"></div>
+      <div class="petalo rotate-3"></div>
+      <div class="petalo rotate-4"></div>
+      <div class="petalo rotate-5"></div>
+      <div class="petalo rotate-6"></div>
+      <div class="petalo rotate-7"></div>
+      <div class="petalo rotate-8"></div>
+      <div class="petalo rotate-9"></div>
+      <div class="petalo rotate-10"></div>
+      <div class="petalo rotate-11"></div>
+      <div class="petalo rotate-12"></div>
+      <div class="petalo rotate-13"></div>
+      <div class="petalo rotate-14"></div>
+      <div class="petalo rotate-15"></div>
+      <div class="petalo rotate-16"></div>
+    </div>
+    <div class="girasol-24">
+      <div class="center"></div>
+      <div class="petalo-back rotate-back-1"></div>
+      <div class="petalo-back rotate-back-2"></div>
+      <div class="petalo-back rotate-back-3"></div>
+      <div class="petalo-back rotate-back-4"></div>
+      <div class="petalo-back rotate-back-5"></div>
+      <div class="petalo-back rotate-back-6"></div>
+      <div class="petalo-back rotate-back-7"></div>
+      <div class="petalo-back rotate-back-8"></div>
+      <div class="petalo-back rotate-back-9"></div>
+      <div class="petalo-back rotate-back-10"></div>
+      <div class="petalo-back rotate-back-11"></div>
+      <div class="petalo-back rotate-back-12"></div>
+      <div class="petalo-back rotate-back-13"></div>
+      <div class="petalo-back rotate-back-14"></div>
+      <div class="petalo-back rotate-back-15"></div>
+      <div class="petalo-back rotate-back-16"></div>
+      <div class="petalo rotate-1"></div>
+      <div class="petalo rotate-2"></div>
+      <div class="petalo rotate-3"></div>
+      <div class="petalo rotate-4"></div>
+      <div class="petalo rotate-5"></div>
+      <div class="petalo rotate-6"></div>
+      <div class="petalo rotate-7"></div>
+      <div class="petalo rotate-8"></div>
+      <div class="petalo rotate-9"></div>
+      <div class="petalo rotate-10"></div>
+      <div class="petalo rotate-11"></div>
+      <div class="petalo rotate-12"></div>
+      <div class="petalo rotate-13"></div>
+      <div class="petalo rotate-14"></div>
+      <div class="petalo rotate-15"></div>
+      <div class="petalo rotate-16"></div>
+    </div>
+    <div class="girasol-25">
+      <div class="center"></div>
+      <div class="petalo-back rotate-back-1"></div>
+      <div class="petalo-back rotate-back-2"></div>
+      <div class="petalo-back rotate-back-3"></div>
+      <div class="petalo-back rotate-back-4"></div>
+      <div class="petalo-back rotate-back-5"></div>
+      <div class="petalo-back rotate-back-6"></div>
+      <div class="petalo-back rotate-back-7"></div>
+      <div class="petalo-back rotate-back-8"></div>
+      <div class="petalo-back rotate-back-9"></div>
+      <div class="petalo-back rotate-back-10"></div>
+      <div class="petalo-back rotate-back-11"></div>
+      <div class="petalo-back rotate-back-12"></div>
+      <div class="petalo-back rotate-back-13"></div>
+      <div class="petalo-back rotate-back-14"></div>
+      <div class="petalo-back rotate-back-15"></div>
+      <div class="petalo-back rotate-back-16"></div>
+      <div class="petalo rotate-1"></div>
+      <div class="petalo rotate-2"></div>
+      <div class="petalo rotate-3"></div>
+      <div class="petalo rotate-4"></div>
+      <div class="petalo rotate-5"></div>
+      <div class="petalo rotate-6"></div>
+      <div class="petalo rotate-7"></div>
+      <div class="petalo rotate-8"></div>
+      <div class="petalo rotate-9"></div>
+      <div class="petalo rotate-10"></div>
+      <div class="petalo rotate-11"></div>
+      <div class="petalo rotate-12"></div>
+      <div class="petalo rotate-13"></div>
+      <div class="petalo rotate-14"></div>
+      <div class="petalo rotate-15"></div>
+      <div class="petalo rotate-16"></div>
+    </div>
+    <div class="girasol-26">
+      <div class="center"></div>
+      <div class="petalo-back rotate-back-1"></div>
+      <div class="petalo-back rotate-back-2"></div>
+      <div class="petalo-back rotate-back-3"></div>
+      <div class="petalo-back rotate-back-4"></div>
+      <div class="petalo-back rotate-back-5"></div>
+      <div class="petalo-back rotate-back-6"></div>
+      <div class="petalo-back rotate-back-7"></div>
+      <div class="petalo-back rotate-back-8"></div>
+      <div class="petalo-back rotate-back-9"></div>
+      <div class="petalo-back rotate-back-10"></div>
+      <div class="petalo-back rotate-back-11"></div>
+      <div class="petalo-back rotate-back-12"></div>
+      <div class="petalo-back rotate-back-13"></div>
+      <div class="petalo-back rotate-back-14"></div>
+      <div class="petalo-back rotate-back-15"></div>
+      <div class="petalo-back rotate-back-16"></div>
+      <div class="petalo rotate-1"></div>
+      <div class="petalo rotate-2"></div>
+      <div class="petalo rotate-3"></div>
+      <div class="petalo rotate-4"></div>
+      <div class="petalo rotate-5"></div>
+      <div class="petalo rotate-6"></div>
+      <div class="petalo rotate-7"></div>
+      <div class="petalo rotate-8"></div>
+      <div class="petalo rotate-9"></div>
+      <div class="petalo rotate-10"></div>
+      <div class="petalo rotate-11"></div>
+      <div class="petalo rotate-12"></div>
+      <div class="petalo rotate-13"></div>
+      <div class="petalo rotate-14"></div>
+      <div class="petalo rotate-15"></div>
+      <div class="petalo rotate-16"></div>
+    </div>
+    <div class="girasol-27">
+      <div class="center"></div>
+      <div class="petalo-back rotate-back-1"></div>
+      <div class="petalo-back rotate-back-2"></div>
+      <div class="petalo-back rotate-back-3"></div>
+      <div class="petalo-back rotate-back-4"></div>
+      <div class="petalo-back rotate-back-5"></div>
+      <div class="petalo-back rotate-back-6"></div>
+      <div class="petalo-back rotate-back-7"></div>
+      <div class="petalo-back rotate-back-8"></div>
+      <div class="petalo-back rotate-back-9"></div>
+      <div class="petalo-back rotate-back-10"></div>
+      <div class="petalo-back rotate-back-11"></div>
+      <div class="petalo-back rotate-back-12"></div>
+      <div class="petalo-back rotate-back-13"></div>
+      <div class="petalo-back rotate-back-14"></div>
+      <div class="petalo-back rotate-back-15"></div>
+      <div class="petalo-back rotate-back-16"></div>
+      <div class="petalo rotate-1"></div>
+      <div class="petalo rotate-2"></div>
+      <div class="petalo rotate-3"></div>
+      <div class="petalo rotate-4"></div>
+      <div class="petalo rotate-5"></div>
+      <div class="petalo rotate-6"></div>
+      <div class="petalo rotate-7"></div>
+      <div class="petalo rotate-8"></div>
+      <div class="petalo rotate-9"></div>
+      <div class="petalo rotate-10"></div>
+      <div class="petalo rotate-11"></div>
+      <div class="petalo rotate-12"></div>
+      <div class="petalo rotate-13"></div>
+      <div class="petalo rotate-14"></div>
+      <div class="petalo rotate-15"></div>
+      <div class="petalo rotate-16"></div>
+    </div>
+    <div class="girasol-28">
+      <div class="center"></div>
+      <div class="petalo-back rotate-back-1"></div>
+      <div class="petalo-back rotate-back-2"></div>
+      <div class="petalo-back rotate-back-3"></div>
+      <div class="petalo-back rotate-back-4"></div>
+      <div class="petalo-back rotate-back-5"></div>
+      <div class="petalo-back rotate-back-6"></div>
+      <div class="petalo-back rotate-back-7"></div>
+      <div class="petalo-back rotate-back-8"></div>
+      <div class="petalo-back rotate-back-9"></div>
+      <div class="petalo-back rotate-back-10"></div>
+      <div class="petalo-back rotate-back-11"></div>
+      <div class="petalo-back rotate-back-12"></div>
+      <div class="petalo-back rotate-back-13"></div>
+      <div class="petalo-back rotate-back-14"></div>
+      <div class="petalo-back rotate-back-15"></div>
+      <div class="petalo-back rotate-back-16"></div>
+      <div class="petalo rotate-1"></div>
+      <div class="petalo rotate-2"></div>
+      <div class="petalo rotate-3"></div>
+      <div class="petalo rotate-4"></div>
+      <div class="petalo rotate-5"></div>
+      <div class="petalo rotate-6"></div>
+      <div class="petalo rotate-7"></div>
+      <div class="petalo rotate-8"></div>
+      <div class="petalo rotate-9"></div>
+      <div class="petalo rotate-10"></div>
+      <div class="petalo rotate-11"></div>
+      <div class="petalo rotate-12"></div>
+      <div class="petalo rotate-13"></div>
+      <div class="petalo rotate-14"></div>
+      <div class="petalo rotate-15"></div>
+      <div class="petalo rotate-16"></div>
+    </div>
+    <div class="girasol-29">
+      <div class="center"></div>
+      <div class="petalo-back rotate-back-1"></div>
+      <div class="petalo-back rotate-back-2"></div>
+      <div class="petalo-back rotate-back-3"></div>
+      <div class="petalo-back rotate-back-4"></div>
+      <div class="petalo-back rotate-back-5"></div>
+      <div class="petalo-back rotate-back-6"></div>
+      <div class="petalo-back rotate-back-7"></div>
+      <div class="petalo-back rotate-back-8"></div>
+      <div class="petalo-back rotate-back-9"></div>
+      <div class="petalo-back rotate-back-10"></div>
+      <div class="petalo-back rotate-back-11"></div>
+      <div class="petalo-back rotate-back-12"></div>
+      <div class="petalo-back rotate-back-13"></div>
+      <div class="petalo-back rotate-back-14"></div>
+      <div class="petalo-back rotate-back-15"></div>
+      <div class="petalo-back rotate-back-16"></div>
+      <div class="petalo rotate-1"></div>
+      <div class="petalo rotate-2"></div>
+      <div class="petalo rotate-3"></div>
+      <div class="petalo rotate-4"></div>
+      <div class="petalo rotate-5"></div>
+      <div class="petalo rotate-6"></div>
+      <div class="petalo rotate-7"></div>
+      <div class="petalo rotate-8"></div>
+      <div class="petalo rotate-9"></div>
+      <div class="petalo rotate-10"></div>
+      <div class="petalo rotate-11"></div>
+      <div class="petalo rotate-12"></div>
+      <div class="petalo rotate-13"></div>
+      <div class="petalo rotate-14"></div>
+      <div class="petalo rotate-15"></div>
+      <div class="petalo rotate-16"></div>
+    </div>
+    <div class="girasol-30">
+      <div class="center"></div>
+      <div class="petalo-back rotate-back-1"></div>
+      <div class="petalo-back rotate-back-2"></div>
+      <div class="petalo-back rotate-back-3"></div>
+      <div class="petalo-back rotate-back-4"></div>
+      <div class="petalo-back rotate-back-5"></div>
+      <div class="petalo-back rotate-back-6"></div>
+      <div class="petalo-back rotate-back-7"></div>
+      <div class="petalo-back rotate-back-8"></div>
+      <div class="petalo-back rotate-back-9"></div>
+      <div class="petalo-back rotate-back-10"></div>
+      <div class="petalo-back rotate-back-11"></div>
+      <div class="petalo-back rotate-back-12"></div>
+      <div class="petalo-back rotate-back-13"></div>
+      <div class="petalo-back rotate-back-14"></div>
+      <div class="petalo-back rotate-back-15"></div>
+      <div class="petalo-back rotate-back-16"></div>
+      <div class="petalo rotate-1"></div>
+      <div class="petalo rotate-2"></div>
+      <div class="petalo rotate-3"></div>
+      <div class="petalo rotate-4"></div>
+      <div class="petalo rotate-5"></div>
+      <div class="petalo rotate-6"></div>
+      <div class="petalo rotate-7"></div>
+      <div class="petalo rotate-8"></div>
+      <div class="petalo rotate-9"></div>
+      <div class="petalo rotate-10"></div>
+      <div class="petalo rotate-11"></div>
+      <div class="petalo rotate-12"></div>
+      <div class="petalo rotate-13"></div>
+      <div class="petalo rotate-14"></div>
+      <div class="petalo rotate-15"></div>
+      <div class="petalo rotate-16"></div>
+    </div>
+    <div class="girasol-31">
+      <div class="center"></div>
+      <div class="petalo-back rotate-back-1"></div>
+      <div class="petalo-back rotate-back-2"></div>
+      <div class="petalo-back rotate-back-3"></div>
+      <div class="petalo-back rotate-back-4"></div>
+      <div class="petalo-back rotate-back-5"></div>
+      <div class="petalo-back rotate-back-6"></div>
+      <div class="petalo-back rotate-back-7"></div>
+      <div class="petalo-back rotate-back-8"></div>
+      <div class="petalo-back rotate-back-9"></div>
+      <div class="petalo-back rotate-back-10"></div>
+      <div class="petalo-back rotate-back-11"></div>
+      <div class="petalo-back rotate-back-12"></div>
+      <div class="petalo-back rotate-back-13"></div>
+      <div class="petalo-back rotate-back-14"></div>
+      <div class="petalo-back rotate-back-15"></div>
+      <div class="petalo-back rotate-back-16"></div>
+      <div class="petalo rotate-1"></div>
+      <div class="petalo rotate-2"></div>
+      <div class="petalo rotate-3"></div>
+      <div class="petalo rotate-4"></div>
+      <div class="petalo rotate-5"></div>
+      <div class="petalo rotate-6"></div>
+      <div class="petalo rotate-7"></div>
+      <div class="petalo rotate-8"></div>
+      <div class="petalo rotate-9"></div>
+      <div class="petalo rotate-10"></div>
+      <div class="petalo rotate-11"></div>
+      <div class="petalo rotate-12"></div>
+      <div class="petalo rotate-13"></div>
+      <div class="petalo rotate-14"></div>
+      <div class="petalo rotate-15"></div>
+      <div class="petalo rotate-16"></div>
+    </div>
+    <div class="girasol-32">
+      <div class="center"></div>
+      <div class="petalo-back rotate-back-1"></div>
+      <div class="petalo-back rotate-back-2"></div>
+      <div class="petalo-back rotate-back-3"></div>
+      <div class="petalo-back rotate-back-4"></div>
+      <div class="petalo-back rotate-back-5"></div>
+      <div class="petalo-back rotate-back-6"></div>
+      <div class="petalo-back rotate-back-7"></div>
+      <div class="petalo-back rotate-back-8"></div>
+      <div class="petalo-back rotate-back-9"></div>
+      <div class="petalo-back rotate-back-10"></div>
+      <div class="petalo-back rotate-back-11"></div>
+      <div class="petalo-back rotate-back-12"></div>
+      <div class="petalo-back rotate-back-13"></div>
+      <div class="petalo-back rotate-back-14"></div>
+      <div class="petalo-back rotate-back-15"></div>
+      <div class="petalo-back rotate-back-16"></div>
+      <div class="petalo rotate-1"></div>
+      <div class="petalo rotate-2"></div>
+      <div class="petalo rotate-3"></div>
+      <div class="petalo rotate-4"></div>
+      <div class="petalo rotate-5"></div>
+      <div class="petalo rotate-6"></div>
+      <div class="petalo rotate-7"></div>
+      <div class="petalo rotate-8"></div>
+      <div class="petalo rotate-9"></div>
+      <div class="petalo rotate-10"></div>
+      <div class="petalo rotate-11"></div>
+      <div class="petalo rotate-12"></div>
+      <div class="petalo rotate-13"></div>
+      <div class="petalo rotate-14"></div>
+      <div class="petalo rotate-15"></div>
+      <div class="petalo rotate-16"></div>
+    </div>
+    <div class="girasol-33">
+      <div class="center"></div>
+      <div class="petalo-back rotate-back-1"></div>
+      <div class="petalo-back rotate-back-2"></div>
+      <div class="petalo-back rotate-back-3"></div>
+      <div class="petalo-back rotate-back-4"></div>
+      <div class="petalo-back rotate-back-5"></div>
+      <div class="petalo-back rotate-back-6"></div>
+      <div class="petalo-back rotate-back-7"></div>
+      <div class="petalo-back rotate-back-8"></div>
+      <div class="petalo-back rotate-back-9"></div>
+      <div class="petalo-back rotate-back-10"></div>
+      <div class="petalo-back rotate-back-11"></div>
+      <div class="petalo-back rotate-back-12"></div>
+      <div class="petalo-back rotate-back-13"></div>
+      <div class="petalo-back rotate-back-14"></div>
+      <div class="petalo-back rotate-back-15"></div>
+      <div class="petalo-back rotate-back-16"></div>
+      <div class="petalo rotate-1"></div>
+      <div class="petalo rotate-2"></div>
+      <div class="petalo rotate-3"></div>
+      <div class="petalo rotate-4"></div>
+      <div class="petalo rotate-5"></div>
+      <div class="petalo rotate-6"></div>
+      <div class="petalo rotate-7"></div>
+      <div class="petalo rotate-8"></div>
+      <div class="petalo rotate-9"></div>
+      <div class="petalo rotate-10"></div>
+      <div class="petalo rotate-11"></div>
+      <div class="petalo rotate-12"></div>
+      <div class="petalo rotate-13"></div>
+      <div class="petalo rotate-14"></div>
+      <div class="petalo rotate-15"></div>
+      <div class="petalo rotate-16"></div>
+    </div>
+    <div class="girasol-34">
+      <div class="center"></div>
+      <div class="petalo-back rotate-back-1"></div>
+      <div class="petalo-back rotate-back-2"></div>
+      <div class="petalo-back rotate-back-3"></div>
+      <div class="petalo-back rotate-back-4"></div>
+      <div class="petalo-back rotate-back-5"></div>
+      <div class="petalo-back rotate-back-6"></div>
+      <div class="petalo-back rotate-back-7"></div>
+      <div class="petalo-back rotate-back-8"></div>
+      <div class="petalo-back rotate-back-9"></div>
+      <div class="petalo-back rotate-back-10"></div>
+      <div class="petalo-back rotate-back-11"></div>
+      <div class="petalo-back rotate-back-12"></div>
+      <div class="petalo-back rotate-back-13"></div>
+      <div class="petalo-back rotate-back-14"></div>
+      <div class="petalo-back rotate-back-15"></div>
+      <div class="petalo-back rotate-back-16"></div>
+      <div class="petalo rotate-1"></div>
+      <div class="petalo rotate-2"></div>
+      <div class="petalo rotate-3"></div>
+      <div class="petalo rotate-4"></div>
+      <div class="petalo rotate-5"></div>
+      <div class="petalo rotate-6"></div>
+      <div class="petalo rotate-7"></div>
+      <div class="petalo rotate-8"></div>
+      <div class="petalo rotate-9"></div>
+      <div class="petalo rotate-10"></div>
+      <div class="petalo rotate-11"></div>
+      <div class="petalo rotate-12"></div>
+      <div class="petalo rotate-13"></div>
+      <div class="petalo rotate-14"></div>
+      <div class="petalo rotate-15"></div>
+      <div class="petalo rotate-16"></div>
+    </div>
+    <div class="girasol-35">
+      <div class="center"></div>
+      <div class="petalo-back rotate-back-1"></div>
+      <div class="petalo-back rotate-back-2"></div>
+      <div class="petalo-back rotate-back-3"></div>
+      <div class="petalo-back rotate-back-4"></div>
+      <div class="petalo-back rotate-back-5"></div>
+      <div class="petalo-back rotate-back-6"></div>
+      <div class="petalo-back rotate-back-7"></div>
+      <div class="petalo-back rotate-back-8"></div>
+      <div class="petalo-back rotate-back-9"></div>
+      <div class="petalo-back rotate-back-10"></div>
+      <div class="petalo-back rotate-back-11"></div>
+      <div class="petalo-back rotate-back-12"></div>
+      <div class="petalo-back rotate-back-13"></div>
+      <div class="petalo-back rotate-back-14"></div>
+      <div class="petalo-back rotate-back-15"></div>
+      <div class="petalo-back rotate-back-16"></div>
+      <div class="petalo rotate-1"></div>
+      <div class="petalo rotate-2"></div>
+      <div class="petalo rotate-3"></div>
+      <div class="petalo rotate-4"></div>
+      <div class="petalo rotate-5"></div>
+      <div class="petalo rotate-6"></div>
+      <div class="petalo rotate-7"></div>
+      <div class="petalo rotate-8"></div>
+      <div class="petalo rotate-9"></div>
+      <div class="petalo rotate-10"></div>
+      <div class="petalo rotate-11"></div>
+      <div class="petalo rotate-12"></div>
+      <div class="petalo rotate-13"></div>
+      <div class="petalo rotate-14"></div>
+      <div class="petalo rotate-15"></div>
+      <div class="petalo rotate-16"></div>
+    </div>
+    <div class="girasol-36">
+      <div class="center"></div>
+      <div class="petalo-back rotate-back-1"></div>
+      <div class="petalo-back rotate-back-2"></div>
+      <div class="petalo-back rotate-back-3"></div>
+      <div class="petalo-back rotate-back-4"></div>
+      <div class="petalo-back rotate-back-5"></div>
+      <div class="petalo-back rotate-back-6"></div>
+      <div class="petalo-back rotate-back-7"></div>
+      <div class="petalo-back rotate-back-8"></div>
+      <div class="petalo-back rotate-back-9"></div>
+      <div class="petalo-back rotate-back-10"></div>
+      <div class="petalo-back rotate-back-11"></div>
+      <div class="petalo-back rotate-back-12"></div>
+      <div class="petalo-back rotate-back-13"></div>
+      <div class="petalo-back rotate-back-14"></div>
+      <div class="petalo-back rotate-back-15"></div>
+      <div class="petalo-back rotate-back-16"></div>
+      <div class="petalo rotate-1"></div>
+      <div class="petalo rotate-2"></div>
+      <div class="petalo rotate-3"></div>
+      <div class="petalo rotate-4"></div>
+      <div class="petalo rotate-5"></div>
+      <div class="petalo rotate-6"></div>
+      <div class="petalo rotate-7"></div>
+      <div class="petalo rotate-8"></div>
+      <div class="petalo rotate-9"></div>
+      <div class="petalo rotate-10"></div>
+      <div class="petalo rotate-11"></div>
+      <div class="petalo rotate-12"></div>
+      <div class="petalo rotate-13"></div>
+      <div class="petalo rotate-14"></div>
+      <div class="petalo rotate-15"></div>
+      <div class="petalo rotate-16"></div>
+    </div>
+    <div class="girasol-37">
+      <div class="center"></div>
+      <div class="petalo-back rotate-back-1"></div>
+      <div class="petalo-back rotate-back-2"></div>
+      <div class="petalo-back rotate-back-3"></div>
+      <div class="petalo-back rotate-back-4"></div>
+      <div class="petalo-back rotate-back-5"></div>
+      <div class="petalo-back rotate-back-6"></div>
+      <div class="petalo-back rotate-back-7"></div>
+      <div class="petalo-back rotate-back-8"></div>
+      <div class="petalo-back rotate-back-9"></div>
+      <div class="petalo-back rotate-back-10"></div>
+      <div class="petalo-back rotate-back-11"></div>
+      <div class="petalo-back rotate-back-12"></div>
+      <div class="petalo-back rotate-back-13"></div>
+      <div class="petalo-back rotate-back-14"></div>
+      <div class="petalo-back rotate-back-15"></div>
+      <div class="petalo-back rotate-back-16"></div>
+      <div class="petalo rotate-1"></div>
+      <div class="petalo rotate-2"></div>
+      <div class="petalo rotate-3"></div>
+      <div class="petalo rotate-4"></div>
+      <div class="petalo rotate-5"></div>
+      <div class="petalo rotate-6"></div>
+      <div class="petalo rotate-7"></div>
+      <div class="petalo rotate-8"></div>
+      <div class="petalo rotate-9"></div>
+      <div class="petalo rotate-10"></div>
+      <div class="petalo rotate-11"></div>
+      <div class="petalo rotate-12"></div>
+      <div class="petalo rotate-13"></div>
+      <div class="petalo rotate-14"></div>
+      <div class="petalo rotate-15"></div>
+      <div class="petalo rotate-16"></div>
+    </div>
+    <div class="girasol-38">
+      <div class="center"></div>
+      <div class="petalo-back rotate-back-1"></div>
+      <div class="petalo-back rotate-back-2"></div>
+      <div class="petalo-back rotate-back-3"></div>
+      <div class="petalo-back rotate-back-4"></div>
+      <div class="petalo-back rotate-back-5"></div>
+      <div class="petalo-back rotate-back-6"></div>
+      <div class="petalo-back rotate-back-7"></div>
+      <div class="petalo-back rotate-back-8"></div>
+      <div class="petalo-back rotate-back-9"></div>
+      <div class="petalo-back rotate-back-10"></div>
+      <div class="petalo-back rotate-back-11"></div>
+      <div class="petalo-back rotate-back-12"></div>
+      <div class="petalo-back rotate-back-13"></div>
+      <div class="petalo-back rotate-back-14"></div>
+      <div class="petalo-back rotate-back-15"></div>
+      <div class="petalo-back rotate-back-16"></div>
+      <div class="petalo rotate-1"></div>
+      <div class="petalo rotate-2"></div>
+      <div class="petalo rotate-3"></div>
+      <div class="petalo rotate-4"></div>
+      <div class="petalo rotate-5"></div>
+      <div class="petalo rotate-6"></div>
+      <div class="petalo rotate-7"></div>
+      <div class="petalo rotate-8"></div>
+      <div class="petalo rotate-9"></div>
+      <div class="petalo rotate-10"></div>
+      <div class="petalo rotate-11"></div>
+      <div class="petalo rotate-12"></div>
+      <div class="petalo rotate-13"></div>
+      <div class="petalo rotate-14"></div>
+      <div class="petalo rotate-15"></div>
+      <div class="petalo rotate-16"></div>
+    </div>
+    <div class="girasol-39">
+      <div class="center"></div>
+      <div class="petalo-back rotate-back-1"></div>
+      <div class="petalo-back rotate-back-2"></div>
+      <div class="petalo-back rotate-back-3"></div>
+      <div class="petalo-back rotate-back-4"></div>
+      <div class="petalo-back rotate-back-5"></div>
+      <div class="petalo-back rotate-back-6"></div>
+      <div class="petalo-back rotate-back-7"></div>
+      <div class="petalo-back rotate-back-8"></div>
+      <div class="petalo-back rotate-back-9"></div>
+      <div class="petalo-back rotate-back-10"></div>
+      <div class="petalo-back rotate-back-11"></div>
+      <div class="petalo-back rotate-back-12"></div>
+      <div class="petalo-back rotate-back-13"></div>
+      <div class="petalo-back rotate-back-14"></div>
+      <div class="petalo-back rotate-back-15"></div>
+      <div class="petalo-back rotate-back-16"></div>
+      <div class="petalo rotate-1"></div>
+      <div class="petalo rotate-2"></div>
+      <div class="petalo rotate-3"></div>
+      <div class="petalo rotate-4"></div>
+      <div class="petalo rotate-5"></div>
+      <div class="petalo rotate-6"></div>
+      <div class="petalo rotate-7"></div>
+      <div class="petalo rotate-8"></div>
+      <div class="petalo rotate-9"></div>
+      <div class="petalo rotate-10"></div>
+      <div class="petalo rotate-11"></div>
+      <div class="petalo rotate-12"></div>
+      <div class="petalo rotate-13"></div>
+      <div class="petalo rotate-14"></div>
+      <div class="petalo rotate-15"></div>
+      <div class="petalo rotate-16"></div>
+    </div>
+    <div class="girasol-40">
+      <div class="center"></div>
+      <div class="petalo-back rotate-back-1"></div>
+      <div class="petalo-back rotate-back-2"></div>
+      <div class="petalo-back rotate-back-3"></div>
+      <div class="petalo-back rotate-back-4"></div>
+      <div class="petalo-back rotate-back-5"></div>
+      <div class="petalo-back rotate-back-6"></div>
+      <div class="petalo-back rotate-back-7"></div>
+      <div class="petalo-back rotate-back-8"></div>
+      <div class="petalo-back rotate-back-9"></div>
+      <div class="petalo-back rotate-back-10"></div>
+      <div class="petalo-back rotate-back-11"></div>
+      <div class="petalo-back rotate-back-12"></div>
+      <div class="petalo-back rotate-back-13"></div>
+      <div class="petalo-back rotate-back-14"></div>
+      <div class="petalo-back rotate-back-15"></div>
+      <div class="petalo-back rotate-back-16"></div>
+      <div class="petalo rotate-1"></div>
+      <div class="petalo rotate-2"></div>
+      <div class="petalo rotate-3"></div>
+      <div class="petalo rotate-4"></div>
+      <div class="petalo rotate-5"></div>
+      <div class="petalo rotate-6"></div>
+      <div class="petalo rotate-7"></div>
+      <div class="petalo rotate-8"></div>
+      <div class="petalo rotate-9"></div>
+      <div class="petalo rotate-10"></div>
+      <div class="petalo rotate-11"></div>
+      <div class="petalo rotate-12"></div>
+      <div class="petalo rotate-13"></div>
+      <div class="petalo rotate-14"></div>
+      <div class="petalo rotate-15"></div>
+      <div class="petalo rotate-16"></div>
+    </div>
+    <div class="girasol-41">
+      <div class="center"></div>
+      <div class="petalo-back rotate-back-1"></div>
+      <div class="petalo-back rotate-back-2"></div>
+      <div class="petalo-back rotate-back-3"></div>
+      <div class="petalo-back rotate-back-4"></div>
+      <div class="petalo-back rotate-back-5"></div>
+      <div class="petalo-back rotate-back-6"></div>
+      <div class="petalo-back rotate-back-7"></div>
+      <div class="petalo-back rotate-back-8"></div>
+      <div class="petalo-back rotate-back-9"></div>
+      <div class="petalo-back rotate-back-10"></div>
+      <div class="petalo-back rotate-back-11"></div>
+      <div class="petalo-back rotate-back-12"></div>
+      <div class="petalo-back rotate-back-13"></div>
+      <div class="petalo-back rotate-back-14"></div>
+      <div class="petalo-back rotate-back-15"></div>
+      <div class="petalo-back rotate-back-16"></div>
+      <div class="petalo rotate-1"></div>
+      <div class="petalo rotate-2"></div>
+      <div class="petalo rotate-3"></div>
+      <div class="petalo rotate-4"></div>
+      <div class="petalo rotate-5"></div>
+      <div class="petalo rotate-6"></div>
+      <div class="petalo rotate-7"></div>
+      <div class="petalo rotate-8"></div>
+      <div class="petalo rotate-9"></div>
+      <div class="petalo rotate-10"></div>
+      <div class="petalo rotate-11"></div>
+      <div class="petalo rotate-12"></div>
+      <div class="petalo rotate-13"></div>
+      <div class="petalo rotate-14"></div>
+      <div class="petalo rotate-15"></div>
+      <div class="petalo rotate-16"></div>
+    </div>
+    <div class="girasol-42">
+      <div class="center"></div>
+      <div class="petalo-back rotate-back-1"></div>
+      <div class="petalo-back rotate-back-2"></div>
+      <div class="petalo-back rotate-back-3"></div>
+      <div class="petalo-back rotate-back-4"></div>
+      <div class="petalo-back rotate-back-5"></div>
+      <div class="petalo-back rotate-back-6"></div>
+      <div class="petalo-back rotate-back-7"></div>
+      <div class="petalo-back rotate-back-8"></div>
+      <div class="petalo-back rotate-back-9"></div>
+      <div class="petalo-back rotate-back-10"></div>
+      <div class="petalo-back rotate-back-11"></div>
+      <div class="petalo-back rotate-back-12"></div>
+      <div class="petalo-back rotate-back-13"></div>
+      <div class="petalo-back rotate-back-14"></div>
+      <div class="petalo-back rotate-back-15"></div>
+      <div class="petalo-back rotate-back-16"></div>
+      <div class="petalo rotate-1"></div>
+      <div class="petalo rotate-2"></div>
+      <div class="petalo rotate-3"></div>
+      <div class="petalo rotate-4"></div>
+      <div class="petalo rotate-5"></div>
+      <div class="petalo rotate-6"></div>
+      <div class="petalo rotate-7"></div>
+      <div class="petalo rotate-8"></div>
+      <div class="petalo rotate-9"></div>
+      <div class="petalo rotate-10"></div>
+      <div class="petalo rotate-11"></div>
+      <div class="petalo rotate-12"></div>
+      <div class="petalo rotate-13"></div>
+      <div class="petalo rotate-14"></div>
+      <div class="petalo rotate-15"></div>
+      <div class="petalo rotate-16"></div>
+    </div>
+    <div class="girasol-43">
+      <div class="center"></div>
+      <div class="petalo-back rotate-back-1"></div>
+      <div class="petalo-back rotate-back-2"></div>
+      <div class="petalo-back rotate-back-3"></div>
+      <div class="petalo-back rotate-back-4"></div>
+      <div class="petalo-back rotate-back-5"></div>
+      <div class="petalo-back rotate-back-6"></div>
+      <div class="petalo-back rotate-back-7"></div>
+      <div class="petalo-back rotate-back-8"></div>
+      <div class="petalo-back rotate-back-9"></div>
+      <div class="petalo-back rotate-back-10"></div>
+      <div class="petalo-back rotate-back-11"></div>
+      <div class="petalo-back rotate-back-12"></div>
+      <div class="petalo-back rotate-back-13"></div>
+      <div class="petalo-back rotate-back-14"></div>
+      <div class="petalo-back rotate-back-15"></div>
+      <div class="petalo-back rotate-back-16"></div>
+      <div class="petalo rotate-1"></div>
+      <div class="petalo rotate-2"></div>
+      <div class="petalo rotate-3"></div>
+      <div class="petalo rotate-4"></div>
+      <div class="petalo rotate-5"></div>
+      <div class="petalo rotate-6"></div>
+      <div class="petalo rotate-7"></div>
+      <div class="petalo rotate-8"></div>
+      <div class="petalo rotate-9"></div>
+      <div class="petalo rotate-10"></div>
+      <div class="petalo rotate-11"></div>
+      <div class="petalo rotate-12"></div>
+      <div class="petalo rotate-13"></div>
+      <div class="petalo rotate-14"></div>
+      <div class="petalo rotate-15"></div>
+      <div class="petalo rotate-16"></div>
+    </div>
+    <div class="girasol-44">
+      <div class="center"></div>
+      <div class="petalo-back rotate-back-1"></div>
+      <div class="petalo-back rotate-back-2"></div>
+      <div class="petalo-back rotate-back-3"></div>
+      <div class="petalo-back rotate-back-4"></div>
+      <div class="petalo-back rotate-back-5"></div>
+      <div class="petalo-back rotate-back-6"></div>
+      <div class="petalo-back rotate-back-7"></div>
+      <div class="petalo-back rotate-back-8"></div>
+      <div class="petalo-back rotate-back-9"></div>
+      <div class="petalo-back rotate-back-10"></div>
+      <div class="petalo-back rotate-back-11"></div>
+      <div class="petalo-back rotate-back-12"></div>
+      <div class="petalo-back rotate-back-13"></div>
+      <div class="petalo-back rotate-back-14"></div>
+      <div class="petalo-back rotate-back-15"></div>
+      <div class="petalo-back rotate-back-16"></div>
+      <div class="petalo rotate-1"></div>
+      <div class="petalo rotate-2"></div>
+      <div class="petalo rotate-3"></div>
+      <div class="petalo rotate-4"></div>
+      <div class="petalo rotate-5"></div>
+      <div class="petalo rotate-6"></div>
+      <div class="petalo rotate-7"></div>
+      <div class="petalo rotate-8"></div>
+      <div class="petalo rotate-9"></div>
+      <div class="petalo rotate-10"></div>
+      <div class="petalo rotate-11"></div>
+      <div class="petalo rotate-12"></div>
+      <div class="petalo rotate-13"></div>
+      <div class="petalo rotate-14"></div>
+      <div class="petalo rotate-15"></div>
+      <div class="petalo rotate-16"></div>
+    </div>
+    <div class="girasol-45">
+      <div class="center"></div>
+      <div class="petalo-back rotate-back-1"></div>
+      <div class="petalo-back rotate-back-2"></div>
+      <div class="petalo-back rotate-back-3"></div>
+      <div class="petalo-back rotate-back-4"></div>
+      <div class="petalo-back rotate-back-5"></div>
+      <div class="petalo-back rotate-back-6"></div>
+      <div class="petalo-back rotate-back-7"></div>
+      <div class="petalo-back rotate-back-8"></div>
+      <div class="petalo-back rotate-back-9"></div>
+      <div class="petalo-back rotate-back-10"></div>
+      <div class="petalo-back rotate-back-11"></div>
+      <div class="petalo-back rotate-back-12"></div>
+      <div class="petalo-back rotate-back-13"></div>
+      <div class="petalo-back rotate-back-14"></div>
+      <div class="petalo-back rotate-back-15"></div>
+      <div class="petalo-back rotate-back-16"></div>
+      <div class="petalo rotate-1"></div>
+      <div class="petalo rotate-2"></div>
+      <div class="petalo rotate-3"></div>
+      <div class="petalo rotate-4"></div>
+      <div class="petalo rotate-5"></div>
+      <div class="petalo rotate-6"></div>
+      <div class="petalo rotate-7"></div>
+      <div class="petalo rotate-8"></div>
+      <div class="petalo rotate-9"></div>
+      <div class="petalo rotate-10"></div>
+      <div class="petalo rotate-11"></div>
+      <div class="petalo rotate-12"></div>
+      <div class="petalo rotate-13"></div>
+      <div class="petalo rotate-14"></div>
+      <div class="petalo rotate-15"></div>
+      <div class="petalo rotate-16"></div>
+    </div>
+    <div class="girasol-46">
+      <div class="center"></div>
+      <div class="petalo-back rotate-back-1"></div>
+      <div class="petalo-back rotate-back-2"></div>
+      <div class="petalo-back rotate-back-3"></div>
+      <div class="petalo-back rotate-back-4"></div>
+      <div class="petalo-back rotate-back-5"></div>
+      <div class="petalo-back rotate-back-6"></div>
+      <div class="petalo-back rotate-back-7"></div>
+      <div class="petalo-back rotate-back-8"></div>
+      <div class="petalo-back rotate-back-9"></div>
+      <div class="petalo-back rotate-back-10"></div>
+      <div class="petalo-back rotate-back-11"></div>
+      <div class="petalo-back rotate-back-12"></div>
+      <div class="petalo-back rotate-back-13"></div>
+      <div class="petalo-back rotate-back-14"></div>
+      <div class="petalo-back rotate-back-15"></div>
+      <div class="petalo-back rotate-back-16"></div>
+      <div class="petalo rotate-1"></div>
+      <div class="petalo rotate-2"></div>
+      <div class="petalo rotate-3"></div>
+      <div class="petalo rotate-4"></div>
+      <div class="petalo rotate-5"></div>
+      <div class="petalo rotate-6"></div>
+      <div class="petalo rotate-7"></div>
+      <div class="petalo rotate-8"></div>
+      <div class="petalo rotate-9"></div>
+      <div class="petalo rotate-10"></div>
+      <div class="petalo rotate-11"></div>
+      <div class="petalo rotate-12"></div>
+      <div class="petalo rotate-13"></div>
+      <div class="petalo rotate-14"></div>
+      <div class="petalo rotate-15"></div>
+      <div class="petalo rotate-16"></div>
+    </div>
+    <div class="girasol-47">
+      <div class="center"></div>
+      <div class="petalo-back rotate-back-1"></div>
+      <div class="petalo-back rotate-back-2"></div>
+      <div class="petalo-back rotate-back-3"></div>
+      <div class="petalo-back rotate-back-4"></div>
+      <div class="petalo-back rotate-back-5"></div>
+      <div class="petalo-back rotate-back-6"></div>
+      <div class="petalo-back rotate-back-7"></div>
+      <div class="petalo-back rotate-back-8"></div>
+      <div class="petalo-back rotate-back-9"></div>
+      <div class="petalo-back rotate-back-10"></div>
+      <div class="petalo-back rotate-back-11"></div>
+      <div class="petalo-back rotate-back-12"></div>
+      <div class="petalo-back rotate-back-13"></div>
+      <div class="petalo-back rotate-back-14"></div>
+      <div class="petalo-back rotate-back-15"></div>
+      <div class="petalo-back rotate-back-16"></div>
+      <div class="petalo rotate-1"></div>
+      <div class="petalo rotate-2"></div>
+      <div class="petalo rotate-3"></div>
+      <div class="petalo rotate-4"></div>
+      <div class="petalo rotate-5"></div>
+      <div class="petalo rotate-6"></div>
+      <div class="petalo rotate-7"></div>
+      <div class="petalo rotate-8"></div>
+      <div class="petalo rotate-9"></div>
+      <div class="petalo rotate-10"></div>
+      <div class="petalo rotate-11"></div>
+      <div class="petalo rotate-12"></div>
+      <div class="petalo rotate-13"></div>
+      <div class="petalo rotate-14"></div>
+      <div class="petalo rotate-15"></div>
+      <div class="petalo rotate-16"></div>
+    </div>
+    <div class="girasol-48">
+      <div class="center"></div>
+      <div class="petalo-back rotate-back-1"></div>
+      <div class="petalo-back rotate-back-2"></div>
+      <div class="petalo-back rotate-back-3"></div>
+      <div class="petalo-back rotate-back-4"></div>
+      <div class="petalo-back rotate-back-5"></div>
+      <div class="petalo-back rotate-back-6"></div>
+      <div class="petalo-back rotate-back-7"></div>
+      <div class="petalo-back rotate-back-8"></div>
+      <div class="petalo-back rotate-back-9"></div>
+      <div class="petalo-back rotate-back-10"></div>
+      <div class="petalo-back rotate-back-11"></div>
+      <div class="petalo-back rotate-back-12"></div>
+      <div class="petalo-back rotate-back-13"></div>
+      <div class="petalo-back rotate-back-14"></div>
+      <div class="petalo-back rotate-back-15"></div>
+      <div class="petalo-back rotate-back-16"></div>
+      <div class="petalo rotate-1"></div>
+      <div class="petalo rotate-2"></div>
+      <div class="petalo rotate-3"></div>
+      <div class="petalo rotate-4"></div>
+      <div class="petalo rotate-5"></div>
+      <div class="petalo rotate-6"></div>
+      <div class="petalo rotate-7"></div>
+      <div class="petalo rotate-8"></div>
+      <div class="petalo rotate-9"></div>
+      <div class="petalo rotate-10"></div>
+      <div class="petalo rotate-11"></div>
+      <div class="petalo rotate-12"></div>
+      <div class="petalo rotate-13"></div>
+      <div class="petalo rotate-14"></div>
+      <div class="petalo rotate-15"></div>
+      <div class="petalo rotate-16"></div>
+    </div>
+    <div class="girasol-49">
+      <div class="center"></div>
+      <div class="petalo-back rotate-back-1"></div>
+      <div class="petalo-back rotate-back-2"></div>
+      <div class="petalo-back rotate-back-3"></div>
+      <div class="petalo-back rotate-back-4"></div>
+      <div class="petalo-back rotate-back-5"></div>
+      <div class="petalo-back rotate-back-6"></div>
+      <div class="petalo-back rotate-back-7"></div>
+      <div class="petalo-back rotate-back-8"></div>
+      <div class="petalo-back rotate-back-9"></div>
+      <div class="petalo-back rotate-back-10"></div>
+      <div class="petalo-back rotate-back-11"></div>
+      <div class="petalo-back rotate-back-12"></div>
+      <div class="petalo-back rotate-back-13"></div>
+      <div class="petalo-back rotate-back-14"></div>
+      <div class="petalo-back rotate-back-15"></div>
+      <div class="petalo-back rotate-back-16"></div>
+      <div class="petalo rotate-1"></div>
+      <div class="petalo rotate-2"></div>
+      <div class="petalo rotate-3"></div>
+      <div class="petalo rotate-4"></div>
+      <div class="petalo rotate-5"></div>
+      <div class="petalo rotate-6"></div>
+      <div class="petalo rotate-7"></div>
+      <div class="petalo rotate-8"></div>
+      <div class="petalo rotate-9"></div>
+      <div class="petalo rotate-10"></div>
+      <div class="petalo rotate-11"></div>
+      <div class="petalo rotate-12"></div>
+      <div class="petalo rotate-13"></div>
+      <div class="petalo rotate-14"></div>
+      <div class="petalo rotate-15"></div>
+      <div class="petalo rotate-16"></div>
+    </div>
+    <div class="girasol-50">
+      <div class="center"></div>
+      <div class="petalo-back rotate-back-1"></div>
+      <div class="petalo-back rotate-back-2"></div>
+      <div class="petalo-back rotate-back-3"></div>
+      <div class="petalo-back rotate-back-4"></div>
+      <div class="petalo-back rotate-back-5"></div>
+      <div class="petalo-back rotate-back-6"></div>
+      <div class="petalo-back rotate-back-7"></div>
+      <div class="petalo-back rotate-back-8"></div>
+      <div class="petalo-back rotate-back-9"></div>
+      <div class="petalo-back rotate-back-10"></div>
+      <div class="petalo-back rotate-back-11"></div>
+      <div class="petalo-back rotate-back-12"></div>
+      <div class="petalo-back rotate-back-13"></div>
+      <div class="petalo-back rotate-back-14"></div>
+      <div class="petalo-back rotate-back-15"></div>
+      <div class="petalo-back rotate-back-16"></div>
+      <div class="petalo rotate-1"></div>
+      <div class="petalo rotate-2"></div>
+      <div class="petalo rotate-3"></div>
+      <div class="petalo rotate-4"></div>
+      <div class="petalo rotate-5"></div>
+      <div class="petalo rotate-6"></div>
+      <div class="petalo rotate-7"></div>
+      <div class="petalo rotate-8"></div>
+      <div class="petalo rotate-9"></div>
+      <div class="petalo rotate-10"></div>
+      <div class="petalo rotate-11"></div>
+      <div class="petalo rotate-12"></div>
+      <div class="petalo rotate-13"></div>
+      <div class="petalo rotate-14"></div>
+      <div class="petalo rotate-15"></div>
+      <div class="petalo rotate-16"></div>
+    </div>
+  </div>
+
+  <!-- Cartita para mi Danielita como la quiero -->
+  <div class="carta-container">
+    <input type="checkbox" id="open" />
+
+    <label for="open" class="wrapper">
+      <div class="tapa uno"></div>
+      <div class="tapa dos"></div>
+      <div class="envelope"></div>
+      <div class="dedicatoria">
+        <p>Para: Danielita</p>
+        <p>De: Marti</p>
+      </div>
+      <div class="sello">🌻</div>
+      <div class="carta">
+        Para Danielita, la mujer más hermosa, inteligente e increíble que existe. <br> Haces que todo sea más bonito 🌻 <br> Te adoro 💛
+      </div>
+      <div class="photo">
+        <img src="./IMG_6372.jpg" alt="photo" />
+      </div>
+    </label>
+  </div>
+</body>
+
+</html>
